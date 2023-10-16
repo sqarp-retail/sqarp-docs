@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunksqarp_docs=self.webpackChunksqarp_docs||[]).push([[7460],{5069:s=>{s.exports=JSON.parse('{"permalink":"/sqarp-docs/blog/tags/facebook","page":1,"postsPerPage":10,"totalPages":1,"totalCount":1,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
