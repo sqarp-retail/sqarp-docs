@@ -14,7 +14,7 @@ const config = {
   url: 'https://sqarp-retail.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/sqarp-docs',
+  baseUrl: '/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -73,6 +73,7 @@ const config = {
         items: [
           {
             type: 'docSidebar',
+            to: 'data-editing/virtualization',
             sidebarId: 'tutorialSidebar',
             position: 'left',
             label: 'Data Editing',
@@ -87,8 +88,8 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/',
+                label: 'Data Editing',
+                to: '/category/data-editing',
               },
             ],
           }
