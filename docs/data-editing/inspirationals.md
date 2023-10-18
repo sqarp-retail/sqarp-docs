@@ -3,11 +3,11 @@ sidebar_position: 4
 ---
 # Inspirationals
 
-## Module Overview
+## Module overview
 
 In this module, inspirational entities and their relations to products are managed. Inspirational entities is the collective term for Series, USPs and Models in SQARP. This module is language dependent.
 
-## Data & Definitions
+## Data & definitions
 
 The inspirational template is divided into six sheets:
 
@@ -16,11 +16,11 @@ The inspirational template is divided into six sheets:
 - **Documents**: Inspirational documents are managed here
 - **Videos**: Inspirational videos are managed here
 - **Descriptions:** Descriptions for inspirational entities are managed here
-- **Product-Inspirationals:** Relations between products and inspirational entities are managed here
+- **Product-inspirationals:** Relations between products and inspirational entities are managed here
 
 ### Inspirationals
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | inspirational_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
@@ -30,7 +30,7 @@ The inspirational template is divided into six sheets:
 
 ### Images
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | inspirational_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
@@ -39,43 +39,47 @@ The inspirational template is divided into six sheets:
 
 ### Documents
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | inspirational_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
 | inspirational_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
 | document_url | URL to one document file. | Must be valid URL to a document file. Validated for 200 response. |
-| document_type | Indication of the type of document | Must be valid document type. List of available document types and corresponding definitions can be found here. |
+| document_type | Indication of the type of document | Must be valid document type.|
 | document_language_code | Indication of the document language. | Lowercased ISO 639-1 Code |
+#### Available document types 
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/264d0665-1b4e-4320-a2a0-d7a5765ade0d" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Videos
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | inspirational_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
 | inspirational_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
 | video_url | URL to one externally hosted video. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
-| video_type | Indication of the type of video | Must be valid video type. List of available video types and corresponding definitions can be found here. |
+| video_type | Indication of the type of video | Must be valid video type.|
 | video_language_code | Indication of the spoken video language. | Lowercased ISO 639-1 Code |
+#### Available video types 
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/a8c12b08-68fe-4697-8ba9-9bfa7ea6be8f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Descriptions
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | inspirational_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
 | inspirational_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
 | header | Header to one description block | Cannot contain html, line breaks or other text formatting. |
 | description | Body of one description block | Cannot contain html, line breaks or other text formatting |
-| bullets | Bullet points of one description block (pipe-separated) | Cannot contain html, line breaks or other text formatting. “|” is used as separator between bullet points. |
+| bullets | Bullet points of one description block (pipe-separated) | Cannot contain html, line breaks or other text formatting. "\|" is used as separator between bullet points. |
 | description_image_url | URL to one image file corresponding to one description block. | Must be valid URL to an image file. Validated for 200 response. |
 | description_video_url | URL to one externally hosted video corresponding to one description block. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
 
 ### Product-inspirationals
 
-[AVVAKTA NY IMPLEMENTATION I MALLEN]
-## SQARP Gold Standard
+
+
 :::caution SQARP Gold Standard
 
 
@@ -174,4 +178,3 @@ Only the inspirationals included in the template will be affected by the change 
 
 ### Product Inspirationals
 
-[AVVAKTA NY IMPLEMENTATION I MALLEN]

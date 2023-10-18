@@ -43,6 +43,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
 
+
         },
         blog: false,
         // blog: {
@@ -62,7 +63,7 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/sqarp-social-card.jpg',
       navbar: {
         title: 'Documentation',
         logo: {

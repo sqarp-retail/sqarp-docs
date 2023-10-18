@@ -9,49 +9,49 @@ In this module, we manage product relations in SQARP. Product relations is a col
 
 The relation templates are not language dependent. The addon category template is language dependent.
 
-### DATA & DEFINITIONS
+## Data & definitions
 
 The product relations module is divided into two different templates: Product Relations and Addon Categories.
 
-### PRODUCT RELATIONS TEMPLATE
+## Product relations template
 
 - Accessories: Accessory relations are managed here
 - Spare Parts: Spare part relations are managed here
 - Components: Component relations are managed here
 - Addons: Addon relations are managed here
 
-### ACCESSORIES
+### Accessories
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | manufacturer_article_number | The manufacturers unique identifier for the main product | Article number must exist in SQARP. |
 | related_manufacturer_article_number | The manufacturers unique identifier for the related product | Article number must exist in SQARP. |
 
-### SPARE PARTS
+### Spare parts
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | manufacturer_article_number | The manufacturers unique identifier for the main product | Article number must exist in SQARP. |
 | related_manufacturer_article_number | The manufacturers unique identifier for the related product | Article number must exist in SQARP. |
 
-### COMPONENTS
+### Components
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | manufacturer_article_number | The manufacturers unique identifier for the main product | Article number must exist in SQARP. |
 | related_manufacturer_article_number | The manufacturers unique identifier for the related product | Article number must exist in SQARP. |
 | quantity | The number of units of the related product included in the relations | Must be positive numeric value |
 
-### ADDONS
+### Addons
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | manufacturer_article_number | The manufacturers unique identifier for the main product | Article number must exist in SQARP. |
 | related_manufacturer_article_number | The manufacturers unique identifier for the related product | Article number must exist in SQARP. |
 | quantity | The number of units of the related product included in the relations | Must be positive numeric value |
 | addoncategory_slug | Reference to an addon category | Addon category must exist in SQARP |
 
-### ADDON CATEGORIES TEMPLATE
+## Addon categories template
 
 - **Addon categories**: This is where addon categories are created and basic information about them is managed
 - **Images**: Addon category images are managed here
@@ -59,26 +59,26 @@ The product relations module is divided into two different templates: Product Re
 - **Videos**: Addon category videos are managed here
 - **Descriptions:** Descriptions for addon categories are managed here
 
-### ADDON CATEGORIES
+### Addon categories
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | addoncategory_slug | Unique identifier for the addon category entity. | Mandatory. Can only contain alphanumerical characters and “-“, “_”. Each addon category slug must be unique within the organization. |
 | addoncategory_translation_[lang] | The public name of the addon category in the language specified by the language code. | Mandatory. |
 | landing_page_url | The URL to the manufacturer’s landing page for the corresponding addon category | Only filled when applicable. Must be valid URL. Validated for 200 response. |
 
-### IMAGES
+### Images
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the addon category. |
 | addoncategory_slug | Unique identifier for the addon category entity. | Must match an addon category slug in the “Addon category” sheet or existing addon category in SQARP. |
 | image_url | URL to one image file. | Must be valid URL to an image file. Validated for 200 response. |
 
-### DOCUMENTS
+### Documents
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the addon category. |
 | addoncategory_slug | Unique identifier for the addon category. | Must match an addon category slug in the “Addon category” sheet or existing addon category in SQARP. |
@@ -86,9 +86,12 @@ The product relations module is divided into two different templates: Product Re
 | document_type | Indication of the type of document | Must be valid document type. List of available document types and corresponding definitions can be found here. |
 | document_language_code | Indication of the document language. | Lowercased ISO 639-1 Code |
 
-### VIDEOS
+#### Available document types 
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/264d0665-1b4e-4320-a2a0-d7a5765ade0d" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-| Data | Definition | Rules & Validation |
+### Videos
+
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the addon category. |
 | addoncategory_slug | Unique identifier for the addon category. | Must match an addon category slug in the “Addon category” sheet or existing addon category in SQARP. |
@@ -96,30 +99,33 @@ The product relations module is divided into two different templates: Product Re
 | video_type | Indication of the type of video | Must be valid video type. List of available video types and corresponding definitions can be found here. |
 | video_language_code | Indication of the spoken video language. | Lowercased ISO 639-1 Code |
 
-### DESCRIPTIONS
+#### Available video types 
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/a8c12b08-68fe-4697-8ba9-9bfa7ea6be8f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-| Data | Definition | Rules & Validation |
+### Descriptions
+
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the addon category. |
 | addoncategory_slug | Unique identifier for the addon category. | Must match an addon category slug in the “Addon category” sheet or existing addon category in SQARP. |
 | header | Header to one description block | Cannot contain html, line breaks or other text formatting. |
 | description | Body of one description block | Cannot contain html, line breaks or other text formatting |
-| bullets | Bullet points of one description block (pipe-separated) | Cannot contain html, line breaks or other text formatting. “|” is used as separator between bullet points. |
+| bullets | Bullet points of one description block (pipe-separated) | Cannot contain html, line breaks or other text formatting. "\|" is used as separator between bullet points. |
 | description_image_url | URL to one image file corresponding to one description block. | Must be valid URL to an image file. Validated for 200 response. |
 | description_video_url | URL to one externally hosted video corresponding to one description block. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
 
-### SQARP GOLD STANDARD
+:::caution SQARP GOLD STANDARD
 
 - Build relations in one direction, from the main product to the related product. It’s generally not a good idea to also build it the other way around.
 - Include an appropriate description of addon categories to guide the customer through the selection of addons.
 - Build addon categories functionally, not just using product types
 - It’s great to add some generic accessories that are appropriate to recommend along with the main product. Don’t include to many though, five is a good benchmark for these kinds of generic accessories.
+:::
+## How to use the editing template
 
-### HOW TO USE THE EDITING TEMPLATE
+### Product relations templates
 
-### PRODUCT RELATIONS TEMPLATES
-
-### ACCESSORIES AND SPARE PARTS
+#### Accessories and spare parts
 
 Accessories and spare parts are two different sheets independent of one another that have the same structure.
 
@@ -135,7 +141,7 @@ To remove a relation from a product that has one relation, remove only the relat
 
 Only the products included in the template will be affected by the change upon upload.
 
-### COMPONENTS
+#### Components
 
 Each row represents one relation.
 
@@ -149,7 +155,7 @@ To remove a relation from a product that has one relation, remove the related ma
 
 Only the products included in the template will be affected by the change upon upload.
 
-### ADDONS
+#### Addons
 
 Each row represents one relation.
 
@@ -163,9 +169,9 @@ To remove a relation from a product that has one relation, remove the related ma
 
 Only the products included in the template will be affected by the change upon upload.
 
-### ADDON CATEGORY TEMPLATES
+### Addon category templates
 
-### ADDON CATEGORIES
+#### Addon categories
 
 Each row represents one addon category.
 
@@ -179,7 +185,7 @@ To change or remove information on an addon category, change or remove the infor
 
 Only the addon categories included in the template will be affected by the change upon upload.
 
-### IMAGES
+#### Images
 
 Each row represents one image.
 
@@ -197,7 +203,7 @@ To change the order of images, change the order of the rows, so that the image y
 
 Only the addon categories included in the template will be affected by the change upon upload.
 
-### DOCUMENTS
+#### Documents
 
 Each row represents one document.
 
@@ -211,7 +217,7 @@ To remove a document from an addon category that currently has several documents
 
 Only the addon categories included in the template will be affected by the change upon upload.
 
-### VIDEOS
+#### Videos
 
 Each row represents one video.
 
@@ -225,7 +231,7 @@ To remove a video from a addon category that currently has several videos, remov
 
 Only the addon categories included in the template will be affected by the change upon upload.
 
-### DESCRIPTIONS
+#### Descriptions
 
 Each row represents one description block.
 

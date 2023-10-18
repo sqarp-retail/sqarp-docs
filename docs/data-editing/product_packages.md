@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Product Packages
+# Product packages
 
 ### Module Overview
 

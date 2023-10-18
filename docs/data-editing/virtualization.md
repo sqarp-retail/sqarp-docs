@@ -8,9 +8,9 @@ sidebar_position: 2
 
 In this module, virtuals are created, basic information are added to the virtuals and products are connected to virtuals. Virtualization is where variant management is done and product titles are set. Virtualization is a language specific module.
 
-### Data & Definitions
+### Data & definitions
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | manufacturer\_article\_number | The manufacturers unique identifier for a product | Article number must exist in SQARP. |
 | internal\_reference | Unique reference for the virtual | Can only contain alphanumerical characters and “-“, “\_”. Each internal reference must be unique within the organization. Mandatory for every virtual. |
@@ -20,15 +20,15 @@ In this module, virtuals are created, basic information are added to the virtual
 | selectable\_value\_[number] | The selectable value for the particular product relating to the key with index [number]. | Should only be used if virtual contains more than one product. The combination of selectable values across all indices must be unique for every product within a virtual. |
 | selectable\_image\_[number] | URL to a swatch image corresponding to the selectable value for the particular product. | Should only be used if virtual contains more than one product. Must be valid URL to an image file. Must be the same image for all products with the same selectable value for each index number. |
 
-### SQARP GOLD STANDARD
+::::caution SQARP GOLD STANDARD
 
-### INTERNAL REFERENCES
+### Internal references
 
 The internal reference should be set so that the virtual is recognizable from the reference itself. When editing data in SQARP, you will frequently need to reference these codes. This task will be made much easier if codes are recognizable. A good rule of thumb can be to use the following structure: [BRAND]-[TYPE]-[DISTINGUISHER]. For example, “SQARP-LAWN-MOWER-SE400”.
 
 It is customary in SQARP to use uppercased letters and hyphens in internal references.
 
-### VIRTUAL GROUPINGS
+### Virtual groupings
 
 You can flexibly configure virtuals in SQARP and most brands have a strong sense of how virtuals should be constructed. Here we give some generic best-practices.
 
@@ -36,7 +36,7 @@ You can flexibly configure virtuals in SQARP and most brands have a strong sense
 - Product that have significant differences in price and technical specifications should generally not be grouped together. That risks confusing the customer when browsing an assortment.
 - If a brands total number of products is small, you should group products less frequently and use smaller virtual groups. If a brands total number of products is large, you should group products more frequently and into larger virtual groups.
 
-### PRODUCT TYPE
+### Product type
 
 The product type of the virtual must be relevant for all products included in the virtual group.
 
@@ -73,7 +73,7 @@ Virtual names should include the most important keywords. Since virtual names ar
 - Use “.” Instead of “,” for decimals
 - Avoid the use of commas in virtual names
 :::
-### SELECTABLES
+### Selectables
 
 Keep selectable keys and values stringent across the assortment. Don’t use “Length (mm)” for one virtual and “Length” for another.
 
@@ -104,7 +104,7 @@ Use swatches every chance you get. They make for a much better consumer experien
 **The concatenation of Product type + Brand + Virtual name must always be unique** across the organisation’s assortment. This is the unique virtual titles rule in SQARP.
 
 **The concatenation of Product type + Brand + Virtual name + Selectable values must always be unique** across the organisation’s assortment. This is the unique product titles rule in SQARP.
-
+::::
 ### How to use the editing template
 
 Each sheet in the virtualization template represents virtualization in one language. You can add multiple sheets to the template representing different languages. Indicate the appropriate language in the sheet name using lowercased ISO 3166-1 alpha-2 codes.

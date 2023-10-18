@@ -11,7 +11,7 @@ In this module, we manage supplier data for products. One product can have sever
 
 The product relations module is divided into two different templates: Product Relations and Addon Categories.
 
-| Data | Definition | Rules & Validation |
+| Data | Definition | Rules & validation |
 | --- | --- | --- |
 | organisation\_slug | Identifier for the organisation that owns the product. | Must be an active organisation in SQARP. |
 | manufacturer\_article\_number | The manufacturers unique identifier for the product. | Article number must exist in SQARP. |
