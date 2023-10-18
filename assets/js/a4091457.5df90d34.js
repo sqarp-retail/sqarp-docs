@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksqarp_docs=self.webpackChunksqarp_docs||[]).push([[228],{2837:s=>{s.exports=JSON.parse('{"label":"hola","permalink":"/sqarp-docs/blog/tags/hola","allTagsPath":"/sqarp-docs/blog/tags","count":1}')}}]);
