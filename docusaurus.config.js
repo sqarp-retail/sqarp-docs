@@ -11,14 +11,14 @@ const config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://Lucasmolin.github.io',
+  url: 'https://sqarp-retail.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/sqarp-docs',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Lucasmolin', // Usually your GitHub org/user name.
+  organizationName: 'sqarp-retail', // Usually your GitHub org/user name.
   projectName: 'sqarp-docs', // Usually your repo name.
   trailingSlash: false,
   onBrokenLinks: 'throw',
