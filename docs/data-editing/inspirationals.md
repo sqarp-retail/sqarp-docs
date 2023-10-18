@@ -113,15 +113,17 @@ Each row represents one image.
 The URL must be a path to an image file. Each inspirational can have none, one or several images.
 
 To add several images to the same inspirational, you create several rows with the same inspirational slug, brand reference and inspirational type.
-:::tip
-The order of the images matter and will have the same order in the SQARP platform as they have in the sheet.
-:::
+
+
+
 To add a new image, simply add a new row, identify the inspirational entity you want to add the image to using the slug for the inspirational, the reference to the brand and the inspirational type. Finally, add the URL.
-
+:::danger
 To remove an image from an inspirational that currently has several images, remove the whole row for that image. To remove an image from an inspirational that has one image, remove only the image URL.
-
+:::
+The order of the images matter and will have the same order in the SQARP platform as they have in the sheet.
+:::tip
 To change the order of images, change the order of the rows, so that the image you want as primary appears first and so on.
-
+:::
 Only the inspirationals included in the template will be affected by the change upon upload.
 
 ### Documents
@@ -133,9 +135,9 @@ The URL must be a path to a document file. Each inspirational can have none, one
 To add several documents to the same inspirational, you create several rows with the same inspirational slug, brand reference and inspirational type.
 
 To add a new document, simply add a new row, identify the inspirational entity you want to add the document to using the slug for the inspirational, the reference to the brand and the inspirational type. Finally, add the URL, document type and language.
-
+:::danger
 To remove a document from an inspirational that currently has several documents, remove the whole row for that document. To remove a document from an inspirational that has one document, remove only the document URL, document type and language.
-
+:::
 Only the inspirationals included in the template will be affected by the change upon upload.
 
 ### Videos
@@ -147,9 +149,9 @@ The URL must be a path to an externally hosted video. Each inspirational can hav
 To add several videos to the same inspirational, you create several rows with the same inspirational slug, brand reference and inspirational type.
 
 To add a new video, simply add a new row, identify the inspirational entity you want to add the video to using the slug for the inspirational, the reference to the brand and the inspirational type. Finally, add the URL, video type and language.
-
+:::danger
 To remove a video from an inspirational that currently has several videos, remove the whole row for that video. To remove a video from an inspirational that has one video, remove only the video URL, video type and language.
-
+:::
 Only the inspirationals included in the template will be affected by the change upon upload.
 
 ### Descriptions
@@ -167,13 +169,15 @@ To add several description blocks to the same inspirational, you create several 
 Remember that the order of description blocks matter and will have the same order in the SQARP platform as in this sheet.
 
 To add a new description block, simply add a new row, identify the inspirational entity you want to add the description block to using the slug for the inspirational, the inspirational type and the reference to the brand. Then add the contents to the description block.
-
+:::danger
 To remove a description block from an inspirational that currently has several description blocks, remove the whole row for that block.
 
 To remove a description block from an inspirational that has one description block, remove all data except the brand reference, the inspirational type and the inspirational slug.
+:::
 
+:::tip
 To change the order of description blocks, change the order of the rows, so that the block you want as primary appears first, and so on.
-
+:::
 Only the inspirationals included in the template will be affected by the change upon upload.
 
 ### Product Inspirationals
