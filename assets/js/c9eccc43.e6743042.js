@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunksqarp_docs=self.webpackChunksqarp_docs||[]).push([[307],{8290:e=>{e.exports=JSON.parse('{"title":"Data editing","description":"All modules needed to create and edit products in SQARP","slug":"/category/data-editing","permalink":"/sqarp-docs/category/data-editing","navigation":{"next":{"title":"Intro","permalink":"/sqarp-docs/"}}}')}}]);
