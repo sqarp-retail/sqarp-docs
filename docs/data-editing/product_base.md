@@ -3,11 +3,11 @@ sidebar_position: 1
 ---
 # Product Base
 
-### MODULE OVERVIEW
+### Module Overview
 
 In this module, products are created in SQARP and are enriched with basic information. Product base is the only module where new products can be created. It is typically the starting module when creating new products.
 
-### DATA & DEFINITIONS
+### Data & Definitions
 
 | Data | Definition | Rules & Validation |
 | --- | --- | --- |
@@ -18,8 +18,8 @@ In this module, products are created in SQARP and are enriched with basic inform
 | manufacturer_product_url | The URL to the manufacturer’s product page for the corresponding product | Only filled when applicable. Must be valid URL. Validated for 200 response. |
 | identifier_[identifier slug] | The identifier value for a certain external identifier. | List of available identifiers and corresponding validation rules can be found here. |
 
-:::info
-### SQARP GOLD STANDARD: MANUFACTURER ARTICLE NUMBER
+:::info SQARP GOLD STANDARD: MANUFACTURER ARTICLE NUMBER
+
 
 **Gold standard rule**: Manufacturer article numbers should only contain alphanumeric characters and “-“, “_”. At least one character should be non-numeric. Article numbers should be maximum 20 characters.
 
