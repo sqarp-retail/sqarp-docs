@@ -21,6 +21,8 @@ In this module, package information is added to existing products in SQARP. Curr
 
 ### How to use the editing template
 
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/croudmjwBPs?si=T2ye1gK1b0n9GrxX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 Each row in the editing template represents a package.
 
 Only the products included in the template will be affected by the upload.
