@@ -27,7 +27,7 @@ The unverified attributes template only contains the manufacturer article number
 ![SQARP Platform Kvs screenshot](/img/kvs.png)
 
 
-This sheet is language dependent. Additional languages can be added by including multiple sheet where each language is indicated in the sheets name.
+This sheet is language dependent. Additional languages can be added by including multiple sheets where each language is indicated in the sheets name.
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
