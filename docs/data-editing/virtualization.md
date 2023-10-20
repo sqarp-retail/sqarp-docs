@@ -32,8 +32,8 @@ It is customary in SQARP to use uppercased letters and hyphens in internal refer
 
 You can flexibly configure virtuals in SQARP and most brands have a strong sense of how virtuals should be constructed. Here we give some generic best-practices.
 
-- Products that look very different visually should generally not be grouped into the same virtual. That risks leading to products becoming “hidden” from a customer in a site list and risk underexposing your assortment.
-- Product that have significant differences in price and technical specifications should generally not be grouped together. That risks confusing the customer when browsing an assortment.
+- Products that look very different visually should generally not be grouped into the same virtual. That risks leading to products become “hidden” from a customer in a site list and risk underexposing your assortment.
+- Products that have significant differences in price and technical specifications should generally not be grouped together. That risks confusing the customer when browsing an assortment.
 - If a brands total number of products is small, you should group products less frequently and use smaller virtual groups. If a brands total number of products is large, you should group products more frequently and into larger virtual groups.
 
 ### Product type

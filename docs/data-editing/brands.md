@@ -80,7 +80,7 @@ Brands have one global name. If your brand has different names in different lang
 
 To add a new brand, create a new row in the template and fill with appropriate data.
 
-To change or remove information on an brand, change or remove the information in the appropriate cells.
+To change or remove information for a brand, change or remove the information in the appropriate cells.
 
 Only the brands included in the template will be affected by the change upon upload.
 
@@ -96,7 +96,7 @@ To add several images to the same brand, you create several rows with the same b
 
 To add a new image, simply add a new row, identify the brand entity you want to add the image to using the slug for the brand, the reference to the brand and the brand type. Finally, add the URL.
 :::danger
-To remove an image from an brand that currently has several images, remove the whole row for that image. To remove an image from an brand that has one image, remove only the image URL.
+To remove an image from a brand that currently has several images, remove the whole row for that image. To remove an image from a brand that has one image, remove only the image URL.
 :::
 The order of the images matter and will have the same order in the SQARP platform as they have in the sheet.
 :::tip
@@ -114,7 +114,7 @@ To add several documents to the same brand, you create several rows with the sam
 
 To add a new document, simply add a new row, identify the brand entity you want to add the document to using the slug for the brand, the reference to the brand and the brand type. Finally, add the URL, document type and language.
 :::danger
-To remove a document from an brand that currently has several documents, remove the whole row for that document. To remove a document from an brand that has one document, remove only the document URL, document type and language.
+To remove a document from a brand that currently has several documents, remove the whole row for that document. To remove a document from an brand that has one document, remove only the document URL, document type and language.
 :::
 Only the brands included in the template will be affected by the change upon upload.
 
@@ -128,7 +128,7 @@ To add several videos to the same brand, you create several rows with the same b
 
 To add a new video, simply add a new row, identify the brand entity you want to add the video to using the slug for the brand, the reference to the brand and the brand type. Finally, add the URL, video type and language.
 :::danger
-To remove a video from an brand that currently has several videos, remove the whole row for that video. To remove a video from an brand that has one video, remove only the video URL, video type and language.
+To remove a video from a brand that currently has several videos, remove the whole row for that video. To remove a video from a brand that has one video, remove only the video URL, video type and language.
 :::
 Only the brands included in the template will be affected by the change upon upload.
 
@@ -148,9 +148,9 @@ Remember that the order of description blocks matter and will have the same orde
 
 To add a new description block, simply add a new row, identify the brand entity you want to add the description block to using the slug for the brand, the brand type and the reference to the brand. Then add the contents to the description block.
 :::danger
-To remove a description block from an brand that currently has several description blocks, remove the whole row for that block.
+To remove a description block from a brand that currently has several description blocks, remove the whole row for that block.
 
-To remove a description block from an brand that has one description block, remove all data except the brand reference, the brand type and the brand slug.
+To remove a description block from a brand that has one description block, remove all data except the brand reference, the brand type and the brand slug.
 :::
 
 :::tip
