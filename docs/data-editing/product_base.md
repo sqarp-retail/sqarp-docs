@@ -36,7 +36,7 @@ In this module, products are created in SQARP and are enriched with basic inform
 
 ### How to use the editing template
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/J8lwKXjCoJ8?si=QOWXuhQ0aBkhlzfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/J8lwKXjCoJ8?si=QOWXuhQ0aBkhlzfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Each row in the editing template represents a product.
 
