@@ -6,7 +6,7 @@ sidebar_position: 8
 
 ### Module overview
 
-In this module, we manage supplier data for products. One product can have several sets of supplier data. This module is one sheet and is lan
+In this module, we manage supplier data for products. One product can have several sets of supplier data. This module is one sheet and is language dependent.
 ### Data & definitions
 
 The product relations module is divided into two different templates: Product Relations and Addon Categories.
