@@ -57,7 +57,11 @@ Virtual content is divided into four separate sheets:
 | description\_image\_url | URL to one image file corresponding to one description block. | Must be valid URL to an image file. Validated for 200 response. |
 | description\_video\_url | URL to one externally hosted video corresponding to one description block. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
 
-## How to use the editing template
+
+### How to use the editing template
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/7RghxW22kl8?si=JbE9Ud-9xXScgcJs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 
 ### Images
 
