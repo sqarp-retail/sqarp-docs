@@ -46,6 +46,13 @@ This sheet is language dependent. Additional languages can be added by including
 | ba_weight_kg | The net weight of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
 | ba_colour | The colour of the product | Must be a defined colour. Multiple colours separated by "\|". The full list of defined colours can be found here. |
 
+
+### How to use the editing template
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/VCrlB_vVORM?si=Y2od0uvA6tD5URX3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+
+
 ::::caution SQARP GOLD STANDARD
 
 ### Unverified attributes (kvs)

@@ -30,12 +30,13 @@ It is customary in SQARP to use uppercased letters and hyphens in internal refer
 
 ### Virtual groupings
 
-Most brands have a strong sense of how virtuals should be constructed. The configuration of virtuals in SQARP are very flexible to accommodate the shifting needs of brands. We have however gathered a few best practices:
 
+Most brands have a strong sense of how virtuals should be constructed. The configuration of virtuals in SQARP are very flexible to accommodate the shifting needs of brands. We have however gathered a few best practices:
+:::warning
 - Products that look very different visually should generally not be grouped into the same virtual. That risks leading to products become “hidden” from a customer in a site list and risk underexposing your assortment.
 - Products that have significant differences in price and technical specifications should generally not be grouped together. That risks confusing the customer when browsing through the assortment.
 - If a brands total number of products is small, you should group products less frequently and use smaller virtual groups. If a brands total number of products is large, you should group products more frequently and into larger virtual groups.
-
+:::
 ### Product type
 
 The product type of the virtual must be relevant for all products included in the virtual group.
@@ -48,8 +49,9 @@ Product types should be consistent across a brands assortment. Meaning if “Nai
 
 Product types should be set with regard to consumer search patterns. Product types are used in titles which, if built thoughtfully, are effective at driving search traffic. Research what words are used by consumers when searching for your particular products and incorporate the findings into your product types. For example, “Gaming Chair” might be a better product type than “Computer Chair” or “Office Chair”.
 
+:::tip
 Product types should not include features. Don’t include the colour, material, size, or other features of the product in the product type. These are left for virtual names.
-
+:::
 
 :::info Style guide for product types
 - Use only standard characters to the greatest extent possible – you never know what non-standard characters will look like in other systems and websites.
