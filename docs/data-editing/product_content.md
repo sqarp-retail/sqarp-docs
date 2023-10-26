@@ -65,7 +65,7 @@ Product content is divided into four separate sheets:
 - Use a white background image that show the whole product as primary.
 :::
 ### How to use the editing template
-
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/ytCMnRSxHi0?si=S4e-nZkosoHAyoxB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ### Images
 
 Each row represents one image.
