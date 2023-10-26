@@ -13,11 +13,11 @@ In this module, package information is added to existing products in SQARP. Curr
 | Data | Definition | Rules & Validation |
 | --- | --- | --- |
 | manufacturer_article_number | The manufacturers unique identifier for a product | Article number must exist in SQARP. |
-| package_height_mm | The hight of the package in millimetres. | Must be numerical |
-| package_width_mm | The width of the package in millimetres. | Must be numerical |
-| package_depth_mm | The depth of the package in millimetres. | Must be numerical |
-| package_volume_m3 | The volume of the package in cubic meters. | Must be numerical |
-| package_weight_kg | The weight of the package in kilograms. | Must be numerical |
+| package_height_mm | The hight of the package in millimetres | Must be numerical |
+| package_width_mm | The width of the package in millimetres | Must be numerical |
+| package_depth_mm | The depth of the package in millimetres | Must be numerical |
+| package_volume_m3 | The volume of the package in cubic meters | Must be numerical |
+| package_weight_kg | The weight of the package in kilograms | Must be numerical. Mandatory |
 
 ### How to use the editing template
 
@@ -35,5 +35,5 @@ To remove a package from a product with one package. Remove all data from the ro
 :::
 For the products included in the template, the package information will be changed to what is represented in the template upon upload.
 :::note
-All columns in the template are mandatory upon upload.
+All columns in the template are mandatory and should not be deleted when uploading."
 :::
