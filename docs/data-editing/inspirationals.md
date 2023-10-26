@@ -9,14 +9,16 @@ In this module, inspirational entities and their relations to products are manag
 
 ## Data & definitions
 
-The inspirational template is divided into six sheets:
+The inspirational template is divided into eight sheets:
 
 - **Inspirationals**: This is where inspirationals are created and basic information about inspirationals is managed
 - **Images**: Inspirational images are managed here
 - **Documents**: Inspirational documents are managed here
 - **Videos**: Inspirational videos are managed here
 - **Descriptions:** Descriptions for inspirational entities are managed here
-- **Product-inspirationals:** Relations between products and inspirational entities are managed here
+- **Product-usps:** Relations between products and usps are managed here
+- **Product-models:** Relations between products and models are managed here
+- **Product-series:** Relations between products and series are managed here
 
 ### Inspirationals
 
@@ -24,29 +26,29 @@ The inspirational template is divided into six sheets:
 | --- | --- | --- |
 | brand\_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
 | inspirational\_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
-| inspirational\_slug | Unique identifier for the inspirational entity. | Mandatory. Can only contain alphanumerical characters and “-“, “\_”. Each inspirational slug must be unique within the organization. |
-| inspirational\_translation\_[lang] | The public name of the inspirational entity in the language specified by the language code. | Mandatory. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Mandatory. Can only contain alphanumerical characters and “-“, “\_”. Each inspirational slug must be unique within the organization. |
+| inspirational\_translation\_[lang] | The public name of the inspirational entity in the language specified by the language code | Mandatory. |
 | landing\_page\_url | The URL to the manufacturer’s landing page for the corresponding inspirational | Only filled when applicable. Must be valid URL. Validated for 200 response. |
 
 ### Images
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
-| inspirational\_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
-| inspirational\_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
-| image\_url | URL to one image file. | Must be valid URL to an image file. Validated for 200 response. |
+| brand\_slug | Reference to an existing brand in SQARP | Mandatory. The brand must be owned by the same organisation as the inspirational. |
+| inspirational\_type | Indication for the type of inspirational | Mandatory. Allowed values are “series”, “usp” and “model”. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
+| image\_url | URL to one image file | Must be valid URL to an image file. Validated for 200 response. |
 
 ### Documents
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
-| inspirational\_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
-| inspirational\_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
-| document\_url | URL to one document file. | Must be valid URL to a document file. Validated for 200 response. |
+| brand\_slug | Reference to an existing brand in SQARP | Mandatory. The brand must be owned by the same organisation as the inspirational. |
+| inspirational\_type | Indication for the type of inspirational | Mandatory. Allowed values are “series”, “usp” and “model”. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
+| document\_url | URL to one document file | Must be valid URL to a document file. Validated for 200 response. |
 | document\_type | Indication of the type of document | Must be valid document type.|
-| document\_language\_code | Indication of the document language. | Lowercased ISO 639-1 Code |
+| document\_language\_code | Indication of the document language | Lowercased ISO 639-1 Code |
 #### Available document types 
 <iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/264d0665-1b4e-4320-a2a0-d7a5765ade0d" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -55,11 +57,11 @@ The inspirational template is divided into six sheets:
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
 | brand\_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
-| inspirational\_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
+| inspirational\_type | Indication for the type of inspirational | Mandatory. Allowed values are “series”, “usp” and “model”. |
 | inspirational\_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
 | video\_url | URL to one externally hosted video. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
 | video\_type | Indication of the type of video | Must be valid video type.|
-| video\_language\_code | Indication of the spoken video language. | Lowercased ISO 639-1 Code |
+| video\_language\_code | Indication of the spoken video language | Lowercased ISO 639-1 Code |
 #### Available video types 
 <iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/a8c12b08-68fe-4697-8ba9-9bfa7ea6be8f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -67,23 +69,43 @@ The inspirational template is divided into six sheets:
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the inspirational. |
-| inspirational\_type | Indication for the type of inspirational. | Mandatory. Allowed values are “series”, “usp” and “model”. |
-| inspirational\_slug | Unique identifier for the inspirational entity. | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
+| brand\_slug | Reference to an existing brand in SQARP | Mandatory. The brand must be owned by the same organisation as the inspirational. |
+| inspirational\_type | Indication for the type of inspirational | Mandatory. Allowed values are “series”, “usp” and “model”. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
 | header | Header to one description block | Cannot contain html, line breaks or other text formatting. |
 | description | Body of one description block | Cannot contain html, line breaks or other text formatting |
 | bullets | Bullet points of one description block (pipe-separated) | Cannot contain html, line breaks or other text formatting. "\|" is used as separator between bullet points. |
-| description\_image\_url | URL to one image file corresponding to one description block. | Must be valid URL to an image file. Validated for 200 response. |
-| description\_video\_url | URL to one externally hosted video corresponding to one description block. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
+| description\_image\_url | URL to one image file corresponding to one description block | Must be valid URL to an image file. Validated for 200 response. |
+| description\_video\_url | URL to one externally hosted video corresponding to one description block | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
 
-### Product-inspirationals
+### Product-USPS
 
+| Data | Definition | Rules & validation |
+| --- | --- | --- |
+| brand\_slug | Reference to an existing brand in SQARP | Mandatory. The brand must be owned by the same organisation as the inspirational. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
+| manufacturer\_artno_ | The manufacturers unique identifier for the product | Article number must exist in SQARP. |
 
+### Product-Models
+
+| Data | Definition | Rules & validation |
+| --- | --- | --- |
+| brand\_slug | Reference to an existing brand in SQARP | Mandatory. The brand must be owned by the same organisation as the inspirational. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
+| manufacturer\_artno_ | The manufacturers unique identifier for the product | Article number must exist in SQARP. |
+
+### Product-Series
+
+| Data | Definition | Rules & validation |
+| --- | --- | --- |
+| brand\_slug | Reference to an existing brand in SQARP | Mandatory. The brand must be owned by the same organisation as the inspirational. |
+| inspirational\_slug | Unique identifier for the inspirational entity | Must match an inspirational slug in the “Inspirationals” sheet or existing inspirational in SQARP. |
+| manufacturer\_artno_ | The manufacturers unique identifier for the product | Article number must exist in SQARP. |
 
 :::caution SQARP Gold Standard
 
 
-- Set inspirational slugs that make it possible to identify the entity only using the slug.
+- Set inspirational slugs that makes it possible to identify the entity only using the slug.
 - All static marketing content that is relevant for consumer e-commerce presentation should be stored on inspirational entities in SQARP.
 - All inspirational entities should have at least one image.
 - All inspirational entities should have at least one description block.
@@ -180,5 +202,27 @@ To change the order of description blocks, change the order of the rows, so that
 :::
 Only the inspirationals included in the template will be affected by the change upon upload.
 
-### Product Inspirationals
+### Product-USPS
 
+This is where we connect products to USPS. 
+
+Each row represents a relation between one product and one USP. 
+
+To add a new relation, add a new row and fill the appropriate brand, inspirational slug and product.
+
+### Product-Models
+
+This is where we connect products to models. 
+
+Each row represents a relation between one product and one USP. 
+
+To add a new relation, add a new row and fill the appropriate brand, inspirational slug and product.
+
+
+### Product-Series
+
+This is where we connect products to series. 
+
+Each row represents a relation between one product and one USP. 
+
+To add a new relation, add a new row and fill the appropriate brand, inspirational slug and product.

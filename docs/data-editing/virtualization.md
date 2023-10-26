@@ -6,7 +6,7 @@ sidebar_position: 2
 
 ### Module overview
 
-In this module, virtuals are created, basic information are added to the virtuals and products are connected to virtuals. Virtualization is where variant management is done and product titles are set. Virtualization is a language specific module.
+In this module, virtuals are created, basic information is added to the virtuals and products are connected to virtuals. Virtualization is where variant management is done and product titles are set. Virtualization is a language specific module.
 
 ### Data & definitions
 
@@ -15,10 +15,10 @@ In this module, virtuals are created, basic information are added to the virtual
 | manufacturer\_article\_number | The manufacturers unique identifier for a product | Article number must exist in SQARP. |
 | internal\_reference | Unique reference for the virtual | Can only contain alphanumerical characters and “-“, “\_”. Each internal reference must be unique within the organization. Mandatory for every virtual. |
 | product\_type | A sting indicating the type of product (or category) included in the virtual. Used in the product title. | Must be the same for all rows with the same internal\_reference. Mandatory for every virtual. |
-| virtual\_name\_translation | A string indicating the specific features and differentiation for the virtual. | Must be the same for all rows with the same internal\_reference. |
+| virtual\_name\_translation | A string indicating the specific features and differentiation for the virtual | Must be the same for all rows with the same internal\_reference. |
 | selectable\_key\_[number] | The header for the selectable key with index [number] | Should only be used if virtual contains more than one product. Must be the same for all rows with the same internal\_reference. Keys with different index numbers within the same virtual must be unique. |
-| selectable\_value\_[number] | The selectable value for the particular product relating to the key with index [number]. | Should only be used if virtual contains more than one product. The combination of selectable values across all indices must be unique for every product within a virtual. |
-| selectable\_image\_[number] | URL to a swatch image corresponding to the selectable value for the particular product. | Should only be used if virtual contains more than one product. Must be valid URL to an image file. Must be the same image for all products with the same selectable value for each index number. |
+| selectable\_value\_[number] | The selectable value for the particular product relating to the key with index [number] | Should only be used if virtual contains more than one product. The combination of selectable values across all indices must be unique for every product within a virtual. |
+| selectable\_image\_[number] | URL to a swatch image corresponding to the selectable value for the particular product | Should only be used if virtual contains more than one product. Must be valid URL to an image file. Must be the same image for all products with the same selectable value for each index number. |
 
 ::::caution SQARP GOLD STANDARD
 
@@ -30,10 +30,11 @@ It is customary in SQARP to use uppercased letters and hyphens in internal refer
 
 ### Virtual groupings
 
-You can flexibly configure virtuals in SQARP and most brands have a strong sense of how virtuals should be constructed. Here we give some generic best-practices.
+
+Most brands have a strong sense of how virtuals should be constructed. The configuration of virtuals in SQARP are very flexible to accommodate the shifting needs of brands. We have however gathered a few best practices:
 :::warning
-- Products that look very different visually should generally not be grouped into the same virtual. Doing so risks products becoming “hidden” from a customer in a site list and risk underexposing your assortment.
-- Products that have significant differences in price and technical specifications should generally not be grouped together. Doing so risks confusing the customer when browsing an assortment.
+- Products that look very different visually should generally not be grouped into the same virtual. That risks leading to products become “hidden” from a customer in a site list and risk underexposing your assortment.
+- Products that have significant differences in price and technical specifications should generally not be grouped together. That risks confusing the customer when browsing through the assortment.
 - If a brands total number of products is small, you should group products less frequently and use smaller virtual groups. If a brands total number of products is large, you should group products more frequently and into larger virtual groups.
 :::
 ### Product type
@@ -114,7 +115,7 @@ Each row in the virtualization template represents one product.
 
 Virtuals are defined in the internal reference, product type and virtual name columns.
 
-Virtualization is the only module where new virtuals can be created. Virtuals must always have product related to them upon creation.
+Virtualization is the only module where new virtuals can be created. Virtuals must always have products related to them upon creation.
 
 The relation between products and virtuals are defined in the mapping between manufacturer article numbers and internal references.
 

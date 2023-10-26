@@ -5,42 +5,41 @@ sidebar_position: 0
 
 ## Module overview
 
-In this module, brands are managed.  This module is language dependent. It is typically the starting module when creating completly new assortments.
+In this module, brands are managed.  This module is language dependent. It is typically the starting module when creating completely new assortments.
 
 ## Data & definitions
 
-The brand template is divided into six sheets:
+The brand template is divided into five sheets:
 
 - **Brands**: This is where brands are created and basic information about brands is managed
-- **Images**: brand images are managed here
-- **Documents**: brand documents are managed here
-- **Videos**: brand videos are managed here
+- **Images**: Brand images are managed here
+- **Documents**: Brand documents are managed here
+- **Videos**: Brand videos are managed here
 - **Descriptions:** Descriptions for brand entities are managed here
-- **Product-brands:** Relations between products and brand entities are managed here
 
 ### Brands
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_type | Indication for the type of brand. | Mandatory. Allowed values are “series”, “usp” and “model”. |
-| brand\_slug | Unique identifier for the brand entity. | Mandatory. Can only contain alphanumerical characters and “-“, “\_”. Each brand slug must be unique within the organization. |
-| brand\_translation\_[lang] | The public name of the brand entity in the language specified by the language code. | Mandatory. |
+| brand\_name_slug | Unique identifier for the brand entity | Mandatory. Can only contain alphanumerical characters and “-“, “\_”. Each brand slug must be unique within the organization. |
+| brand\_name | The public name of the brand entity | Mandatory|
+| logo\_image\_url | The URL to the brand logo | Highly recommended |
 | landing\_page\_url | The URL to the manufacturer’s landing page for the corresponding brand | Only filled when applicable. Must be valid URL. Validated for 200 response. |
 
 ### Images
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_name\_slug | Reference to a brand in the brand sheet | Mandatory.|
-| image\_url | URL to one image file. | Must be valid URL to an image file. Validated for 200 response. |
+| brand\_name\_slug | Reference to a brand in the brand sheet or an existing brand in SQARP | Mandatory.|
+| image\_url | URL to one image file | Must be valid URL to an image file. Validated for 200 response. |
 
 ### Documents
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_name\_slug | Reference to an existing brand in SQARP. | Mandatory.|
-| document\_url | URL to one document file. | Must be valid URL to a document file. Validated for 200 response. |
-| document\_type | Indication of the type of document | Must be valid document type.|
-| document\_language\_code | Indication of the document language. | Lowercased ISO 639-1 Code |
+| brand\_name\_slug | Reference to a brand in the brand sheet or an existing brand in SQARP | Mandatory|
+| document\_url | URL to one document file | Must be valid URL to a document file. Validated for 200 response. |
+| document\_type | Indication of the document type | Must be valid document type|
+| document\_language\_code | Indication of the document language | Lowercased ISO 639-1 Code |
 #### Available document types 
 <iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/264d0665-1b4e-4320-a2a0-d7a5765ade0d" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
@@ -48,9 +47,9 @@ The brand template is divided into six sheets:
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_name\_slug | Reference to an existing brand in SQARP. | Mandatory.|
+| brand\_name\_slug | Reference to a brand in the brand sheet or an existing brand in SQARP. | Mandatory.|
 | video\_url | URL to one externally hosted video. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
-| video\_type | Indication of the type of video | Must be valid video type.|
+| video\_type | Indication of the video type | Must be valid video type.|
 | video\_language\_code | Indication of the spoken video language. | Lowercased ISO 639-1 Code |
 #### Available video types 
 <iframe width="100%" height="600" src="https://sqarp.retool.com/embedded/public/a8c12b08-68fe-4697-8ba9-9bfa7ea6be8f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -59,7 +58,7 @@ The brand template is divided into six sheets:
 
 | Data | Definition | Rules & validation |
 | --- | --- | --- |
-| brand\_name\_slug | Reference to an existing brand in SQARP. | Mandatory. |
+| brand\_name\_slug | Reference to a brand in the brand sheet or an existing brand in SQARP. | Mandatory. |
 | header | Header to one description block | Cannot contain html, line breaks or other text formatting. |
 | description | Body of one description block | Cannot contain html, line breaks or other text formatting |
 | bullets | Bullet points of one description block (pipe-separated) | Cannot contain html, line breaks or other text formatting. "\|" is used as separator between bullet points. |
@@ -78,7 +77,7 @@ Each row represents one brand entity.
 
 Brands have one global name. If your brand has different names in different languages, please create multiple brands.
 
-To add a new brand, create a new row in the template and fill with appropriate data.
+To add a new brand, create a new row in the template, identify the brand entity using a slug for the brand, add the brand_name and the URL for the brand logo. Finally the URL for the brand_page if applicable.
 
 To change or remove information for a brand, change or remove the information in the appropriate cells.
 
@@ -94,7 +93,7 @@ To add several images to the same brand, you create several rows with the same b
 
 
 
-To add a new image, simply add a new row, identify the brand entity you want to add the image to using the slug for the brand, the reference to the brand and the brand type. Finally, add the URL.
+To add a new image, simply add a new row, identify the brand entity you want to add the image to using the slug for the brand and add the image URL.
 :::danger
 To remove an image from a brand that currently has several images, remove the whole row for that image. To remove an image from a brand that has one image, remove only the image URL.
 :::
@@ -112,9 +111,9 @@ The URL must be a path to a document file. Each brand can have none, one or seve
 
 To add several documents to the same brand, you create several rows with the same brand\_name\_slug.
 
-To add a new document, simply add a new row, identify the brand entity you want to add the document to using the slug for the brand, the reference to the brand and the brand type. Finally, add the URL, document type and language.
+To add a new document, simply add a new row, identify the brand entity you want to add the document to using the slug for the brand. Add a URL to the document file and then add meta information: identify the document type and the language of the document.
 :::danger
-To remove a document from a brand that currently has several documents, remove the whole row for that document. To remove a document from an brand that has one document, remove only the document URL, document type and language.
+To remove a document from a brand that currently has several documents, remove the whole row for that document. To remove a document from a brand that has one document, remove only the document URL, document type and language.
 :::
 Only the brands included in the template will be affected by the change upon upload.
 
@@ -126,7 +125,7 @@ The URL must be a path to an externally hosted video. Each brand can have none, 
 
 To add several videos to the same brand, you create several rows with the same brand\_name\_slug.
 
-To add a new video, simply add a new row, identify the brand entity you want to add the video to using the slug for the brand, the reference to the brand and the brand type. Finally, add the URL, video type and language.
+To add a new video, simply add a new row, identify the brand entity you want to add the video to using the slug for the brand. Add the URL to the video, video type and language.
 :::danger
 To remove a video from a brand that currently has several videos, remove the whole row for that video. To remove a video from a brand that has one video, remove only the video URL, video type and language.
 :::
