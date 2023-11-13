@@ -4,9 +4,12 @@ sidebar_position: 2
 
 # Product packages
 
-### Module Overview
+### Module overview
 
 In this module, package information is added to existing products in SQARP. Currently, only primary packages can be added to products. One product can have several packages/parcels.
+### How to use the editing template
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/croudmjwBPs?si=T2ye1gK1b0n9GrxX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Data & Definitions
 
@@ -19,9 +22,7 @@ In this module, package information is added to existing products in SQARP. Curr
 | package_volume_m3 | The volume of the package in cubic meters | Must be numerical |
 | package_weight_kg | The weight of the package in kilograms | Must be numerical. Mandatory |
 
-### How to use the editing template
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/croudmjwBPs?si=T2ye1gK1b0n9GrxX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 Each row in the editing template represents a package.
 

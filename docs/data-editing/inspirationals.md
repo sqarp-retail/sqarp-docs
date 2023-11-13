@@ -3,9 +3,12 @@ sidebar_position: 4
 ---
 # Inspirationals
 
-## Module overview
+### Module overview
 
 In this module, inspirational entities and their relations to products are managed. Inspirational entities is the collective term for Series, USPs and Models in SQARP. This module is language dependent.
+
+### How to use the editing template
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/IDk_SiWZYT0?si=QoNwdh6vA3hOE-fS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Data & definitions
 

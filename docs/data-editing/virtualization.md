@@ -7,6 +7,8 @@ sidebar_position: 2
 ### Module overview
 
 In this module, virtuals are created, basic information is added to the virtuals and products are connected to virtuals. Virtualization is where variant management is done and product titles are set. Virtualization is a language specific module.
+### How to use the editing template
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/R2K2YdoxGSw?si=_6silOmZAGLDKgTx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Data & definitions
 
