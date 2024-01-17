@@ -35,5 +35,7 @@ The product relations module is divided into two different templates: Product Re
 | release\_date | The planned release date for the product | Must be on the format YYYY-MM-DD |
 | discontinued\_date | The planned discontinuation date for the product | Must be on the format YYYY-MM-DD |guage dependent.
 
+
 #### Available Product Units
 <iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/c81bbf4c-5e1c-4e2a-a507-5520e50c44b9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
