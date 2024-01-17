@@ -9,7 +9,7 @@ sidebar_position: 8
 In this module, we manage supplier data for products. One product can have several sets of supplier data. This module is one sheet and is language dependent.
 ### How to use the editing template
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/NFsSbnGU-nk?si=hL_SmNGeJPzBreua" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/pTAvNwd2H64?si=chlOEiHqxgx3sq4R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Data & definitions
 
