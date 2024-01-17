@@ -44,7 +44,7 @@ This sheet is language dependent. Additional languages can be added by including
 | ba_depth_mm | The net depth of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
 | ba_diameter_mm | The net diameter of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
 | ba_weight_kg | The net weight of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
-| ba_colour | The colour of the product | Must be a defined colour. Multiple colours separated by "\|". The full list of defined colours can be found here. |
+| ba_colour | The colour of the product | Must be a defined colour. Multiple colours separated by "\|". The full list of defined colours can be found below. |
 
 
 ### How to use the editing template

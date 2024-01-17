@@ -7,6 +7,10 @@ sidebar_position: 8
 ### Module overview
 
 In this module, we manage supplier data for products. One product can have several sets of supplier data. This module is one sheet and is language dependent.
+### How to use the editing template
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/NFsSbnGU-nk?si=hL_SmNGeJPzBreua" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Data & definitions
 
 The product relations module is divided into two different templates: Product Relations and Addon Categories.
@@ -31,6 +35,5 @@ The product relations module is divided into two different templates: Product Re
 | release\_date | The planned release date for the product | Must be on the format YYYY-MM-DD |
 | discontinued\_date | The planned discontinuation date for the product | Must be on the format YYYY-MM-DD |guage dependent.
 
-### How to use the editing template
-
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/NFsSbnGU-nk?si=hL_SmNGeJPzBreua" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+#### Available video types 
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/a8c12b08-68fe-4697-8ba9-9bfa7ea6be8f" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

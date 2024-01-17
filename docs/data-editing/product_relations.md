@@ -83,7 +83,7 @@ The product relations module is divided into two different templates: Product Re
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the addon category. |
 | addoncategory_slug | Unique identifier for the addon category. | Must match an addon category slug in the “Addon category” sheet or existing addon category in SQARP. |
 | document_url | URL to one document file. | Must be valid URL to a document file. Validated for 200 response. |
-| document_type | Indication of the type of document | Must be valid document type. List of available document types and corresponding definitions can be found here. |
+| document_type | Indication of the type of document | Must be valid document type. List of available document types and corresponding definitions can be found below. |
 | document_language_code | Indication of the document language. | Lowercased ISO 639-1 Code |
 
 #### Available document types 
@@ -96,7 +96,7 @@ The product relations module is divided into two different templates: Product Re
 | brand_slug | Reference to an existing brand in SQARP. | Mandatory. The brand must be owned by the same organisation as the addon category. |
 | addoncategory_slug | Unique identifier for the addon category. | Must match an addon category slug in the “Addon category” sheet or existing addon category in SQARP. |
 | video_url | URL to one externally hosted video. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
-| video_type | Indication of the type of video | Must be valid video type. List of available video types and corresponding definitions can be found here. |
+| video_type | Indication of the type of video | Must be valid video type. List of available video types and corresponding definitions can be found below. |
 | video_language_code | Indication of the spoken video language. | Lowercased ISO 639-1 Code |
 
 #### Available video types 
