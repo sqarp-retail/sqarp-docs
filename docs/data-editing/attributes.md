@@ -47,9 +47,10 @@ This sheet is language dependent. Additional languages can be added by including
 | ba_depth_mm | The net depth of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
 | ba_diameter_mm | The net diameter of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
 | ba_weight_kg | The net weight of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
-| ba_colour | The colour of the product | Must be a defined colour. Multiple colours separated by "\|". The full list of defined colours can be found here. |
+| ba_colour | The colour of the product | Must be a defined colour. Multiple colours separated by "\|". The full list of defined colours can be found below. |
 
-
+#### Available colours
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/ef22ceda-ecd0-47f1-bb59-bf1a3942716e"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  scrolling="no"></iframe>
 
 
 

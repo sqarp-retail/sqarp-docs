@@ -25,7 +25,11 @@ Each row in the editing template represents a product.
 | taric\_code | The EU tariff code for the product | Must be 10 numerical characters. Validated towards EU database. See https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric_en |
 | country\_of\_origin | The country of origin for the product | Must be 2 uppercased alphabetical characters. Validated towards ISO 3166-1 alpha-2 standard. |
 | manufacturer\_product\_url | The URL to the manufacturer’s product page for the corresponding product | Only filled when applicable. Must be valid URL. Validated for 200 response. |
-| identifier\_[identifier slug] | The identifier value for a certain external identifier | List of available identifiers and corresponding validation rules can be found here. |
+| identifier\_[identifier slug] | The identifier value for a certain external identifier | List of available identifiers and corresponding validation rules can be found below. |
+
+### Identifier
+
+<iframe width="100%" height="500" src="https://sqarp.retool.com/embedded/public/4082b842-e128-4fe6-a3e9-513074a43181" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 :::info SQARP GOLD STANDARD: MANUFACTURER ARTICLE NUMBER
 
@@ -35,9 +39,7 @@ Each row in the editing template represents a product.
 **Gold standard reasoning**: When moving data between systems, you want to avoid article numbers becoming distorted. When you use only numeric characters, there is a risk of codes being interpreted as numeric values. This can distort the actual numbers (especially if there are leading zeros) but it can also make codes difficult to map between databases since they risk being read as different data types in different systems. Moreover, you want to avoid too long article numbers and special characters to make sure they’re compliant for storing in most ERP systems.
 :::
 
-### Identifier
 
-<iframe width="100%" height="500" src="https://sqarp.retool.com/embedded/public/4082b842-e128-4fe6-a3e9-513074a43181" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- ### How to generate the editing template from SQARP
 
