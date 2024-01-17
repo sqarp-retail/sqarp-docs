@@ -6,6 +6,15 @@ sidebar_position: 1
 ### Module overview
 
 In this module, products are created in SQARP and are enriched with basic information. Product base is the only module where new products can be created. It is typically the starting module when creating new products.
+### How to use the data editing feature
+
+<iframe width="100%" height="500" src="https://demo.arcade.software/c9cGxGOn9d5As3X390K6?embed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+### How to use the editing template
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/J8lwKXjCoJ8?si=QOWXuhQ0aBkhlzfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+Each row in the editing template represents a product.
 
 ### Data & definitions
 
@@ -13,10 +22,11 @@ In this module, products are created in SQARP and are enriched with basic inform
 | --- | --- | --- |
 | manufacturer\_article\_number | The manufacturers unique identifier for a product | Can only contain alphanumerical characters and “-“, “\_”, “/”, ”.”, “:”. Each article number must be unique within the organisation. |
 | brand\_slug | Reference to an existing brand in SQARP | The brand must be owned by the same organisation as the product. A product can only have one brand reference. |
-| taric\_code | The EU tariff code for the product | Must be 10 numerical characters. Validated towards EU database. See https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric\_en |
+| taric\_code | The EU tariff code for the product | Must be 10 numerical characters. Validated towards EU database. See https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric_en |
 | country\_of\_origin | The country of origin for the product | Must be 2 uppercased alphabetical characters. Validated towards ISO 3166-1 alpha-2 standard. |
 | manufacturer\_product\_url | The URL to the manufacturer’s product page for the corresponding product | Only filled when applicable. Must be valid URL. Validated for 200 response. |
 | identifier\_[identifier slug] | The identifier value for a certain external identifier | List of available identifiers and corresponding validation rules can be found below. |
+
 ### Identifier
 
 <iframe width="100%" height="500" src="https://sqarp.retool.com/embedded/public/4082b842-e128-4fe6-a3e9-513074a43181" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -35,11 +45,7 @@ In this module, products are created in SQARP and are enriched with basic inform
 
 [Insert description for how to generate template] -->
 
-### How to use the editing template
 
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/J8lwKXjCoJ8?si=QOWXuhQ0aBkhlzfb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-
-Each row in the editing template represents a product.
 
 ### Products affected
 

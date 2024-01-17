@@ -3,9 +3,14 @@ sidebar_position: 0
 ---
 # Brands
 
-## Module overview
+### Module overview
 
 In this module, brands are managed.  This module is language dependent. It is typically the starting module when creating completely new assortments.
+
+### How to use the editing template
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/YbG6fDY4q0I?si=5xPfIZjaBS5IJU4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 ## Data & definitions
 
@@ -66,9 +71,6 @@ The brand template is divided into five sheets:
 | description\_video\_url | URL to one externally hosted video corresponding to one description block. | Must be valid URL to a video. Preferably youtube or vimeo. Validated for 200 response. |
 
 
-## How to use the editing template
-
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/YbG6fDY4q0I?si=5xPfIZjaBS5IJU4M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Brands
 

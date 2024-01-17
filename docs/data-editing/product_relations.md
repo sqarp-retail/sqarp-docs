@@ -8,6 +8,7 @@ sidebar_position: 4
 In this module, we manage product relations in SQARP. Product relations is a collective word for the four relation types available in SQARP: Accessories, Spare parts, Components and Addons. Associated with addons are Addon Categories which are also covered in this module.
 
 The relation templates are not language dependent. The addon category template is language dependent.
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/4Q-59xY2c5g?si=ThAfbVXgNMkOJjuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Data & definitions
 
@@ -123,7 +124,7 @@ The product relations module is divided into two different templates: Product Re
 :::
 ## How to use the editing template
 
-<iframe width="100%" height="400" src="https://www.youtube.com/embed/4Q-59xY2c5g?si=ThAfbVXgNMkOJjuE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ### Product relations templates
 
 #### Accessories and spare parts

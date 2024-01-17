@@ -7,6 +7,9 @@ sidebar_position: 7
 ### Module Overview
 
 In this module, we manage attributes. Attributes is an umbrella term for Unverified Attributes and SQARP Verified Attributes. All attributes are on the product level. Attributes is tabulated product information.
+### How to use the editing template
+
+<iframe width="100%" height="500" src="https://www.youtube.com/embed/VCrlB_vVORM?si=Y2od0uvA6tD5URX3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Data & definitions
 
@@ -46,10 +49,8 @@ This sheet is language dependent. Additional languages can be added by including
 | ba_weight_kg | The net weight of the product | Can be numeric value AND/OR range of numeric values separated by “-“ AND/OR multiple numeric values separated by "\|" |
 | ba_colour | The colour of the product | Must be a defined colour. Multiple colours separated by "\|". The full list of defined colours can be found below. |
 
-
-### How to use the editing template
-
-<iframe width="100%" height="500" src="https://www.youtube.com/embed/VCrlB_vVORM?si=Y2od0uvA6tD5URX3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+#### Available colours
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/ef22ceda-ecd0-47f1-bb59-bf1a3942716e"  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen  scrolling="no"></iframe>
 
 
 
