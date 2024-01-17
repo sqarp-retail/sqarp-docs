@@ -39,3 +39,8 @@ The product relations module is divided into two different templates: Product Re
 #### Available Product Units
 <iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/c81bbf4c-5e1c-4e2a-a507-5520e50c44b9" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+#### Available Markets
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/198f6dd4-8c43-4944-b942-c89a1254a718" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+#### Available Languages
+<iframe width="100%" height="400" src="https://sqarp.retool.com/embedded/public/eb328847-4d19-4908-b002-6eea183ab6d2" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
