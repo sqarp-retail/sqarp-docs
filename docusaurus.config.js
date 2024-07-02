@@ -69,6 +69,7 @@ const config = {
         logo: {
           alt: 'SQARP Logo',
           src: 'img/logo_blue.svg',
+          srcDark: 'img/logo_white.svg',
         },
         items: [
           {
