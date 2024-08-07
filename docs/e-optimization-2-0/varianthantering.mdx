@@ -1,0 +1,248 @@
+# Varianthantering
+## Kontext i hela processen
+
+
+
+* Andra modulen som bygger upp den grundläggande strukturen för varianter och huvudartiklar.
+* Målet är att för hela sortimentet skapa en varianthanteringsstruktur med huvudartiklar och valbara attribut för att hjälpa kunden navigera sortimentet. Med detta menas att alla varianter av en produkt samlas på en sida. Kunden kommer kunna navigera och välja mellan de olika varianterna direkt på denna sida. 
+*Exempel: Om en tröja finns i flera färger och storlekar, kommer alla dessa alternativ att visas på samma sida, och kunden ska enkelt kunna välja sin önskade färg och storlek.*
+
+* I samband med varianthanteringsstrukturen sätts även unika titlar på alla produkter. 
+* Strukturen som skapas med varianter och huvudartiklar nyttjas längre fram för att placera ut media och beskrivningar på de två olika abstraktionsnivåerna. 
+
+## Vad är det för data som ingår i denna modul?
+
+Hela varianthanteringsmodulen är språkspecifik, nedan data gäller per språk. 
+
+* Koppling till huvudartikel som knyter samman varianter av samma produkt. 
+* Produkttyp
+* Huvudartikelnamn
+* Valbara attribut
+* Swatch-bilder till valbara attribut. Med swatch-bilder menas till exempel färgprover eller mönsterprover för att ge en visuell representation av olika alternativ.
+
+
+
+## Varför är denna modul viktig?
+
+
+**Hjälpa kunden navigera sortimentet mer effektivt**
+
+o Genom att dela upp sortimentet i huvudartiklar och varianter kan vi underlätta för kunder att navigera stora sortiment. Uppdelningen gör att kunden inte behöver skrolla igenom listor med många snarlika / likvärdiga produkter, utan kan mycket snabbare få en överblick av ett sortiment genom att titta på det i en organiserad struktur. 
+
+o För ett sortiment med 1000 artiklar som kan delas in huvudartiklar med 5 varianter i varje så kommer en genomsnittlig kund hitta relevant produkt 5 gånger snabbare jämfört med om varianterna listas separat.
+
+**Hjälpa kunden att se kontexten för en produkt**
+
+o Beroende på produktkategori kommer 50-90% av trafiken direkt till produktsidan i en e-handel. När en kund kommer direkt till produktsidan bör du visa den fulla kontexten av en produktvariant, vilket innebär att visa motsvarande produkt i andra versioner.
+
+o Om du listar artiklar som singelprodukter, måste kunden anstränga sig för att förstå att motsvarande produkt finns i andra versioner som kanske bättre matchar deras behov. Kunden behöver antingen gå tillbaka till sökmotorn och modifiera sin sökning, använda hemsidans sökfunktion eller navigera genom kategoriträdet. Oavsett vilket alternativ kunde väljer, tvingas de göra ytterligare 5-10 klick för att hitta en annna version av produkten som de redan upptäckt.
+
+import bildbastu2 from '../../static/img/doc-images/bildbastu2.png';
+
+<img src={bildbastu2} width="900"/>
+
+
+o Listar du istället varianten i kontexten av övriga varianter kan kunden omedelbart se alla tillgängliga versioner av produkten och med enstaka klick navigera till den föredragna varianten.
+
+import bildbastuvariant from '../../static/img/doc-images/bildbastuvariant.png'; 
+
+<img src={bildbastuvariant} width="900"/>
+
+
+o Bättre trafikdrivning / SEO: En hierarkisk landningssida är nästan alltid mer relevant för en kund som kommer direkt via en sökmotor än en enskild produktsida. Detta leder till att huvudartikelsidor rankar bättre än motsvarande enskilda produktsidor.
+
+**Hjälpa kunden förstå likheter / skillnader mellan produkter**
+
+o En väluppbyggd varianthantering underlättar för kunden att förstå de väsentliga skillnaderna mellan produkter i ett sortiment. Den hierarkiska namngivningen gör det enkelt för kunden att förstå skillnader mellan huvudartiklar och sedan mellan varianter inom samma huvudartikel. Detta är också positivt ur ett sökmotorperspektiv, eftersom unik titelsättning säkerställer att det finns förutsättningar för relevanta träffar på specifika sökord. 
+
+
+import beslagsbodenvariant1 from '../../static/img/doc-images/beslagsbodenvariant1.png'; 
+
+<img src={beslagsbodenvariant1} width="1000"/>
+
+
+import beslagsbodenvariant2 from '../../static/img/doc-images/beslagsbodenvariant2.png'; 
+
+<img src={beslagsbodenvariant2} width="1000"/>
+
+
+**Möjliggör för att kunna spara information mer effektivt**
+
+o En uppdelning av sortiment i huvudartiklar och varianter ger möjlighet att spara information på rätt abstraktionsnivå. Det är ofta fallet att mycket information är gemensam för alla varianter (exempelvis installationsanvisning, produktfilm, beskrivning osv). I de fallen blir det ineffektivt, och besvärligt att underhålla, om informationen dupliceras till alla varianter. Istället kan du enkelt ha samma information tillgänglig för alla varianter inom en huvudartikel.
+
+import documentsvirtual from '../../static/img/doc-images/documentsvirtual.png'; 
+
+<img src={documentsvirtual} width="500"/>
+
+## Tips & trix / Best-practice
+
+
+
+
+::::caution SQARP GOLD STANDARD
+
+### Internal reference
+
+Din produkts interna referens bör sättas så att varianten (virtual) är igenkännbar från själva referensen. När du redigerar data i SQARP plattformen kommer du ofta behöva hänvisa till referensen. Detta blir då mycket enklare om referensen är igenkännbar. En bra tumregel är att använda följande struktur:[VARUMÄRKE]-[TYP]-[DISTINKTION]. Till exempel, "SQARP-GRÄSKLIPPARE-SE400". 
+
+Det är vanligt att använda versaler och bindestreck i internal reference.
+
+### Gruppering av varianter
+
+
+De flesta varumärken har en tydlig uppfattning om hur varianter bör utformas. Konfigurationen av virtuella objekt i SQARP är mycket flexibel för att möta varumärkenas föränderliga behov. Vi har dock samlat några bästa praxis:
+:::warning
+- Produkter som ser mycket olika ut visuellt bör generellt inte grupperas i samma virtuella objekt. Detta riskerar att göra produkterna "dolda" för kunden i en webbplatslista och riskerar att underexponera ditt sortiment.
+- Produkter som har betydande skillnader i pris och tekniska specifikationer bör generellt inte grupperas tillsammans. Detta riskerar att förvirra kunden när de bläddrar igenom sortimentet.
+- Om ett varumärkes totala antal produkter är litet bör du gruppera produkter mindre ofta och använda mindre virtuella grupper. Om ett varumärkes totala antal produkter är stort bör du gruppera produkter mer frekvent och i större virtuella grupper.
+:::
+### Produkttyp
+
+Produkttypen för en variant bör sättas så att den är relevant för alla produkter som ingår i varianten.
+
+Produkttypen bör vara tillräckligt specifik så att en kund kan förstå vilken produkt de tittar på.
+
+Produkttypen bör inkludera specifikt sammanhang där det är nödvändigt. Till exempel: "Skruv" är inte en hjälpsam produkttyp medan "Skruv för dörrhandtag" är det.
+
+Produkttypen bör vara konsekvent inom ett varumärkes sortiment. Det innebär att om "Nagellack" är en produkttyp i ditt sortiment, bör du inte ha en annan produkttyp som kallas "Nagel lack" eller "Lack för Naglar". Konsekvens kommer hjälpa kunderna att förstå sortimentet. 
+
+Produkttyper bör sättas med hänsyn till konsumenters sökmönster. Produkttyper används i titlar som, om de är genomtänkta, är effektiva för att driva söktrafik. Undersök vilka ord som används av konsumenter när de söker efter dina specifika produkter och integrera dessa i dina produkttyper. Till exempel kan "Gamingstol" vara en bättre produkttyp än "Datorstol" eller "Kontorsstol". 
+
+:::tip
+Produkttyper bör inte inkludera egenskaper. Inkludera inte färg, material, storlek eller andra egenskaper hos produkten i produkttypen. Dessa ska lämnas till variant namnen. 
+:::
+
+:::info StILGUIDE FÖR PRODUKTTYPER
+- Betona de viktiga orden genom att använda versaler i början av ordet. Börja andra ord, såsom "för", "med", "i", med gemener.
+- Håll produkttyperna kortfattade; när du överskrider 25 tecken bör du ha en bra förklaring till varför en så lång produkttyp är nödvändig.
+:::
+### Variantnamn
+
+Variantnamnen bör särskilja olika varianter som har samma produkttyp från varandra.
+Variantnamnen bör vara konsekventa inom ramen för produkttyper. Till exempel, om en variant har variantnamnet "Blå 100 cm" och ett annan med samma produkttyp har variantnamnet "Blå", är de unika men inte konsekventa. Bibehåll konsekvens genom att kalla dem "Blå 100 cm" respektive "Blå 200 cm". Försök i allmänhet att hålla samma tema för hur variantnamnen struktureras inom produkttyper.
+
+Variantnamn bör inkludera de viktigaste nyckelorden. Eftersom variantnamn är en del av produktens titel är det viktigt att inkludera ord som kunder använder när de söker efter produkter i titeln. Dessa nyckelord bör läggas till även om de inte är nödvändiga för att särskilja varianter från varandra. Exempel: Om du har olika typer av dörrhandtag kan form och längd vara identifierande/beskrivande faktorer. Försök använda SEO-vänliga termer för att underlätta för kunderna att hita produkterna. Tänk på vilka sökord en kund kan använda för att hitta specifika produkter.
+
+:::info STilGUIDE FÖR variantnamn:
+
+- Använd endast standardtecken i största möjliga utsträckning - du vet aldrig hur icke-standardtecken kommer att se ut i andra system och webbplatser.
+- Betona de viktiga orden genom att använda versaler i början av ordet. Börja andra ord, såsom “för”, “med”, “i” med gemener.
+- Inkludera enheter i variantnamn; “100 cm” är bättre än “100”. Använd mellanslag för att separera värdet från enheten.
+- Inkludera inte varumärket.
+- Använd “.” istället för “,” för decimaler.
+- Undvik användning av kommatecken i variantnamn.
+:::
+### Valbara attribut
+
+Håll valbara nycklar och värden strikta över hela sortimentet. Använd inte “Längd (mm)” för en variant och “Längd” för en annan.
+
+Undvik ofullständiga val. När du använder flera valmöjligheter, se till att de är harmoniserade så att kunden alltid gör lika många val som det finns valmöjligheter. Till exempel, om det finns 4 produkter i en variant “Grön Bomull”, “Blå Bomull”, “Röd Bomull” och “Grön Silke”. Om du använder två valmöjligheter, “Färg” och “Material”, får du inget harmoniserat val – för om en kund väljer materialet “Silke”, har de redan gjort det kompletta valet. I det här fallet är det bättre att ge kunden en valmöjlighet “Typ” eller “Modell” och få alla alternativ i en valmöjlighet.
+
+Om du har möjlighet, bygg färre valmöjligheter. Du vill göra kundens konfiguration på en produktsida så enkel som möjligt, men du vill också minimera antalet klick som krävs innan kunden kan lägga till en produkt i sin kundvagn. Om du undrar om du ska lägga till en ytterligare valmöjlighet, är svaret troligen nej.
+
+Se till att de valbara värdena står på egna ben. Du vill inte göra värdena beroende av nycklarna eftersom nycklarna inte kommer att vara tillgängliga i alla applikationer. Säg till exempel att du har en lampa som är tillgänglig med och utan dimmer. Det kan vara frestande att sätta nyckeln “Har dimmer” och värdena “Ja” och “Nej”. Men dessa värden är meningslösa utan nyckeln. Sätt istället nyckeln till “Modell” eller “Dimmer” och värdena till “Med Dimmer” och “Utan Dimmer”.
+
+Inkludera alltid enheter i valbara värden. Aldrig “100”, alltid “100 mm”.
+
+Sätt valmöjligheter som konsumenterna kan relatera till. Inkludera extra förklaringar för att göra valet enkelt för konsumenterna. Om du säljer en radiator kan det vara frestande att använda “5 kW” som det valbara värdet, men “5 kW (5-10 m³)” är mycket mer användbart för kunden.
+
+Var inte för specifik med nycklarna. Eftersom värdena ska stå på egna ben är det bättre att använda nycklar som är lätta att förstå för att undvika att förvirra kunden.
+
+Använd swatch bilder varje gång du har möjlighet till det. Det ger en mycket bättre kundupplevelse.
+
+
+:::info STILGUIDE FÖR VALBARA ATTRIBUT
+
+- Vid val av fler valbara attribut än ett, ta det mest relevanta attributet ur kundens perspektiv först.
+- Om flera textvärden (t.ex. färger) ska ingå i samma valmöjlighet, använd “/” som separator.
+- Om flera mått ska ingå i samma valbara värden, använd “x” som separator om de är i samma enhet.
+- Börja inte ett valbart värde med en liten bokstav.
+- Använd mellanslag för att separera mått från enheter.
+- Använd standardtecken.
+:::
+### Produkttitel
+
+**Kombinationen av Produkttyp + Varumärke + Variantnamn måste alltid vara unik** inom organisationens sortiment. Detta är regeln för unika variant titlar i SQARP.
+
+**Kombinationen av Produkttyp + Varumärke + Variantnamn + Valbara värden måste alltid vara unik** inom organisationens sortiment. Detta är regeln för unika produktnamn i SQARP.
+
+
+
+
+
+
+
+::::
+
+
+
+
+
+## Hur går jag praktiskt tillväga för att färdigställa modulen?
+
+1. Bestäm vilka språk varianthanteringen ska göras på
+2.	Ladda ner, fyll i och importera template som heter ”virtualization”
+3.	Kontrollera dina produktsidor (stämmer dina valbara attribut, finns det icke möjliga val?)
+
+
+
+## Q&A
+
+<details>
+<summary>Jag har inga variationer i mitt sortiment, vad gör jag då?</summary>
+
+Om ditt sortiment inte har några variationer kan du hantera det genom att erbjuda produkterna som de är utan alternativ som färgval, storlek eller andra variationer.
+En bör överväga att inkludera färgen eller storleken i variantnamnet istället. Detta för att göra det enklare för kund att identifiera och välja rätt produkt och att optimera sökbarheten. En produkt som inte har flera varianter ska inte ha valbara värden.
+
+</details>
+
+<details>
+<summary>Jag har inga variationer i mitt PIM-system, går det att automatisera uppdateringsflödet?</summary>
+
+Svar
+
+</details>
+
+<details>
+<summary>Jag har uppdelningen variant/huvudartikel i mitt PIM, men har inga valbara värden, vad gör jag då?</summary>
+
+Bestäm vilka attribut som varierar mellan dina produktvarianter. Vanliga exempel är färg, storlek, vikt, material. När du har identifierat de nödvändiga attributen, definierar du attributvärden. 
+
+</details>
+
+<details>
+<summary>Vad finns det för för- och nackdelar med att bygga ihop produkter?</summary>
+
+**FÖRDELAR:** 
+
+***Förbättrad kundupplevelse:*** Genom att kombinera varianter (som olika färger eller storlekar av en produkt) på en sida förenklar du navigeringsupplevelsen för kunden. Som kund kan man enkelt jämföra olika alternativ och fatta informerade köpbeslut utan att behöva navigera mellan flera sidor. 
+
+***Ökad konvertering:*** Genom att hålla kunden på samma sida och ge dem möjligheten att välja mellan olika varianter minskar risken att de lämnar webbplatsen utan att göra ett köp.
+
+***Förbättrad produktvisibilitet:*** Genom att ha alla varianter tillsammans ökar synligheten för varje produktalternativ. Kunden kan snabbt se det fullständiga utbudet av valmöjligheter, vilket kan uppmuntra kunden till att utforska och eventuellt köpa olika varianter.
+
+**NACKDELAR:** 
+
+***Risk för röriga produktsidor:*** Om en produkt har väldigt många olika varianter finns det risk att produktsidan blir rörig och svårnavigerad, vilket kan försämra kundupplevelsen. Exempelvis kan en dropdown-meny för att välja färg på en tröja bli för lång och därmed svår att använda.
+
+</details>
+
+<details>
+<summary>Vad ska jag överväga för faktorer när jag beslutar vilka produkter jag ska bygga ihop?</summary>
+
+Om ditt sortiment är omfattande eller innehåller många varianter är det fördelaktigt att bygga ihop produkter. Däremot, om ditt sortiment är smalt och endast innehåller fåtal produkter eller varianter, kan det vara mer effektivt att inte bygga ihop produkter. Det kan också vara lämpligt att inte bygga ihop produkter som söks eller identifieras genom sina unika koder eller specifika modellnummer. *Exempel: Varmvattenberedare finns vanligtvis i olika storlekar och modeller, och varje modell kan ha specifika tekniska specifikationer och funktioner. Om kunder ofta söker efter en specifik modell eller modellnummer för att matcha deras behov, kan det vara mer fördelaktigt att ha varje modell separat på sin egen produktida. Detta gör det lättare för kunder att hitta exakt den produkt de letar efter genom att söka direkt efter dess unika kod eller modellnamn.* 
+
+</details>
+
+<details>
+<summary>Vad ska jag överväga för faktorer när jag beslutar vilka värden jag ska sätta som valbara?</summary>
+
+***Relevans:*** Välj attribut som är mest relevanta för dina kunders behov och preferenser. Detta kan inkludera egenskaper som storlek, färg, material, eller andra funktionella, estetiska egenskaper som kunderna kan vara intresserade av.
+
+***Produktspecifikationer:*** Fokusera på attribut som är viktiga för att beskriva och differentiera dina produkter. Det kan vara tekniska specifikationer, kapacitet, prestandaegenskaper, eller andra detaljer som är avgörande för hur kunderna bedömer och jämför produkterna.
+
+***Navigeringsupplevelse:*** Gör det enkelt för kunderna att navigera och jämföra produkter genom att välja tydliga och relevanta attribut. En intuitiv och smidig användarupplevelse ökar chansen att kunderna hittar och köper rätt produkt.
+
+***SEO-vänligt:*** Välj attribut som kan förbättra din sökmotoroptimering (SEO) och marknadsföringsstrategier. Använd relevanta sökord och attribut som kunder ofta söker efter för att förbättra din synlighet och locka rätt målgrupp.
+
+</details>
