@@ -1,0 +1,106 @@
+---
+sidebar_position: 1
+---
+
+# Overview
+
+## Context of the Entire Process
+
+This is the first module where products are created and basic information is added to them.  
+The goal of this module is to create all article numbers in **SQARP** so that they can later be enriched with more information and context in future modules.  
+
+Another goal is to ensure that the **basic information required to support order and logistics flows** is in place.
+
+### What data is included in this module?
+- Article numbers and identifiers  
+- Product names  
+- Taric codes / Customs tariff numbers  
+- Country of origin  
+- Packaging data  
+- Sales units & conversion factors  
+- Price and delivery time per sales market  
+
+---
+
+## Why is this module important?
+
+Order and logistics information is **essential** for the digital business to function at all.
+
+- **Article numbers** are used to identify a unique purchasable product and can be used for matching between different systems. This is especially important in the order flow to clearly indicate which product is being referred to.  
+- **Product names** are often used on both orders and shipping labels to clarify which product is being handled.  
+- **Taric codes / Customs tariff numbers** are used during import and export to declare the types of goods being traded. Tariff codes are mandatory in most business systems with product information.  
+- **Countries of origin** are legally required in most business systems.  
+- **Packaging data** is used to estimate shipping costs and to optimize logistics flows.  
+- **Units – prices – delivery times** are needed for functioning order and logistics flows.  
+
+---
+
+## Tips & Tricks / Best Practices
+
+::::caution SQARP GOLD STANDARD— Article number rules & reasoning
+
+  ### Gold standard rule
+  Article numbers should only contain **alphanumeric characters** as well as `-` and `_`. At least one character should be non-numeric. Article numbers should be **no longer than 20 characters**.
+
+  ### Gold standard reasoning
+  When transferring data between systems, it’s important to avoid article numbers being distorted. If you only use numeric characters, there is a risk that codes are interpreted as numerical values. This can lead to actual numbers being distorted, especially if they contain leading zeros.  
+
+  It can also cause problems matching codes between databases, as they may be interpreted as different data types in different systems. Additionally, avoid overly long article numbers and special characters to ensure compatibility with most ERP systems.
+::::
+
+---
+
+## How do I practically complete the module?
+
+1. **Define the scope** of products and languages.  
+2. **Fill in the relevant fields** in the Basic Template (titled “Order & Logistics” in the first row) for your assortment.  
+3. **Fix any errors** that might occur during validation. Common issues include:
+   - Customs tariff numbers not meeting the Swedish Customs Authority’s requirements  
+   - Countries of origin not following ISO standards  
+   - Invalid field values (see `available_units` in the Basic Template for valid values)  
+
+---
+
+## Q&A
+
+<details>
+  <summary><strong>I’m missing customs codes for my products – how do I assign them?</strong></summary>
+<div>
+<p>Use the <strong>customs tariff tool</strong>:</p>
+<p>
+  <a href="https://tulltaxan.tullverket.se/arctictariff-public-web/#!/taric/nomenclature/sbn?sd=2024-07-09&d=I&cc=&l=sv&ql=sv&ea=false" target="_blank" rel="noreferrer">
+    tulltaxan.tullverket.se
+  </a>
+</p>
+
+<ul>
+  <li>Use the text in the HS number heading to help you.</li>
+  <li>Be sure to read the notes for the relevant sections and chapters to find the correct code.</li>
+  <li>Select the correct <strong>6-digit code</strong>.</li>
+  <li>Mark “export” and search using the 6-digit code; depending on the product, choose the correct final digits.</li>
+</ul>
+
+<p><strong>For Norwegian customs codes:</strong></p>
+<ul>
+  <li>An item classified and assigned an EU customs code should have the <strong>corresponding code</strong> in Norway.</li>
+  <li>
+    The first <strong>4 digits</strong> of customs codes are identical worldwide.
+    For example, a gas grill made of iron/steel will start with <code>7321</code> in all countries.
+  </li>
+</ul>
+
+<p>To find the correct final digits of the Norwegian code, input the first 4 digits of the EU code here:</p>
+<p>
+  <a href="https://tolltariffen.toll.no/tolltariff" target="_blank" rel="noreferrer">
+    tolltariffen.toll.no
+  </a>
+</p>
+
+<p>
+  Expand the sublevels one at a time until you find the right match. Norwegian codes are <strong>8 digits</strong> and generally simpler
+  (fewer variations than in the EU).
+</p>
+
+<p><strong>For further help or guidance:</strong><br />Contact the <strong>Swedish Customs Authority (Tullverket)</strong> directly for personalized consultation.</p>
+</div>
+</details>
