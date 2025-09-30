@@ -1,0 +1,103 @@
+# Inspirationsinformation
+## Kontext i hela processen
+
+* Här hanteras information som inte är kopplad till specifika produkter, men som fortfarande är mycket relevant för konsumenter för att förstå ett sortiment. Inspirationsentiteter gör det möjligt att lagra information på rätt abstraktionsnivå och med en enda sanningskälla. Om data för inspirationsentiteter lagrades på varje enskild produkt skulle förändringar av den informationen innebära att alla underliggande produkter måste uppdateras (vilket kan vara hundratals). Genom att lagra data på inspirationsentiteter med relationer till produkterna får vi en bekväm enkel sanningskälla för den informationen. Här konsolideras all marknadsinformation som är gemensam för flera produkter och vi kopplar rätt produkter till rätt marknadsinformation. Marknadsinformationen sparas på så kallade inspirationsentiteter för att göra den överskådlig och enkel att hantera. Exempel på inspirationsentiteter kan vara Varumärke, Serie/Kollektion, USP/Teknologi/Material, Kategori – dvs bredare ”grupper” som delar in produkterna i sortimentet. 
+* Målet med modulen är att konsolidera all marknadsinformation som är relevant för kunden i sin köpresa och/eller för att underlätta navigeringen av ett sortiment för kund. Datan ska finns i ett standardiserat digitalt format och det ska finnas excplicita relationer mellan inspirationsentiteterna och produkterna i sortimentet. 
+* Inspirationsinformation kan vara effektiv i att driva organisk trafik till relevanta landningssidor. Det finns därför skäl att göra en sökordsanalys inför modulen för att säkra att urvalet av inspirationsentitieter reflekterar kundernas efterfrågan. 
+
+
+## Vad är det för data som ingår i denna modul?
+
+* Det finns fyra grupper av inspirationsentiteter: Brand, Serie, USP och Modell. Det går att skapa så många entiteter som man vill inom varje grupp. 
+
+***Brand:*** Brands är den högsta inspirationsentiteten i hierarkin av inspirationsentiteter inom SQARP plattformen. Den fungerar som en övergripande representation av varumärket och kan kopplas till både produkter och andra inspirationsentiteter. Syftet här är att kapsla in hela varumärket utan att fokusera på enskilda produkter. Informationen som lagras på ett brand används för att skapa inspirerande och omfattande innehåll på varumärkessidor på e-handelswebbplatser eller återförsäljarnas egna sidor. Detta innehåll är avgörande för att attrahera organisk trafik från sökmotorer när kunder söker efter varumärkesnamn, vilket i sin tur ökar synligheten och engagemanget för varumärket.
+
+
+***Serie:*** Serier är underkollektioner av produkter som delar upp ett enskilt varumärkes sortiment i olika funktions-, design- eller priskategorier. Varje serie är kopplad till ett varumärke och bör definieras av tillverkaren. En produkt kan tillhöra flera serier. En serie kan innehålla produkter från flera kategorier. 
+
+***USP:*** USP (Unique Selling Point) är underkollektioner av produkter som delar upp ett enskilt varumärkes sortiment i olika grupper baserat på till exempel tekonologi, funktion, design, material eller andra särskiljande egenskaper. Varje USP är kopplad till ett varumärke. En produkt kan ha flera USP:ar. USP är den mest löst definierade inspirationsentiteten – vilket i princip betyder att allt inspirationsinnehåll som inte är kopplat till brand, serie eller modell är en USP.
+
+***Model:*** Modeller är underkollektioner av produkter från ett varumärke inom specifika kategorier. Varje modell är kopplad till ett varumärke och bör definieras av tillverkaren. 
+
+* En entitet byggs upp av ett namn, koppling till varumärke, bilder, dokument, video och beskrivningar.
+
+* Till en entitet kopplas produkter med relationer.
+
+* Varje entitet kopplas till ett specifikt varumärke.
+
+## Varför är denna modul viktig?
+
+**Hjälpa kunden att navigera sortimentet**
+
+o *Underlätta navigationen:* Relevant inspirationsinformation gör det lättare för kunden att förstå och navigera sortimentet. Genom att presentera rätt information på rätt abstraktionsnivå kan kunden snabbt hitta vad de letar efter.
+
+**Nå ut med fulla berättelsen om ditt sortiment**
+
+o *Mer än bara artikelinformation:* Ofta exponeras kunden endast för artikelinformation i den digital kontexten, särskilt i tredjepartskanaler. Denna modul säkerställer att kunderna också får tillgång till den övergripande marknadsinformationen, vilket ger en helhetsbild av produkterna och inspirerar ytterligare. Detta hjälper dig att sticka ut från dina konkurrenter.
+
+**Driva organisk trafik**
+
+o *Förbättra SEO:* Många konsumenter hittar produkter genom sökmotorer. För att synas med relevanta sidor i sökresultaten, är SEO avgörande. Här är innehållet den viktigaste komponenten. Genom att inkludera engagerande och relevant innehåll kan du förbättra dina landningssidor och öka den organiska trafiken. 
+
+**Förbättra kundupplevelsen**
+
+o *Bygga en stark berättelse:* En tillverkare bygger berättelsen om sitt sortiment i flera dimensioner, från varumärket som helhet till de specifika produkterna. Denna helhetsbild är viktig både för marknadsföringen och för att kunden ska förstå produkterna och deras kontext vid köpbeslut. Att göra inspirationsinnehåll tillgängligt i tredjepartskanaler är fördelaktigt för alla i värdekedjan, eftersom det både förbättrar marknadsföringsmöjligheterna och ger kunden en bättre köpkontext. 
+
+**Effektivisera hanteringen av produktinformation**
+
+o *Flexibel informationshantering:* Genom att använda inspirationsentiter kan du lagra data på ett effektivt sätt och undvika att duplicera information över flera artiklar. Detta gör det möjligt att uppdatera och hantera information mer effektivt och flexibelt.
+
+## Tips & trix / Best-practice
+
+* *Vilka inspirationsentiter vi inte bör skapa:* Undvik att skapa inspirationsentiter som inte har något innehålla kopplat till sig. Kom ihåg att syftet med inspirationsentiter är att fånga upp information som inte är produktrelaterad. Det finns väldigt begränsat värde (i förhållande till insatsen) i att skapa tomma inspirationsentiter. 
+
+
+
+
+:::caution SQARP Gold Standard
+
+
+- Sätt slugs på dina inspirationsentiteter som gör det möjligt att identifiera dessa enbart med slugen.
+- All typ av statiskt marknadsföringsinnehåll som är relevant för e-handelspresentation bör lagras på inspirationsentiteter i SQARP.
+- Alla inspirationsentiteter bör ha minst en bild.
+- Alla inspirationsentiter bör ha minst ett beskrivningsblock.
+- Beskrivningar bör vara skrivna på ett sätt som gör det meningsfullt att visa dem på associerade produktsidor.
+- Alla inspirationsentiteter bör ha associerade produkter. Skapa inte inspirationsentiteter som vi inte kan kopplade underliggande produkter till.
+:::
+
+## Hur går jag praktiskt tillväga för att färdigställa modulen?
+
+1. Ladda ner, fyll i och importera template som heter ”inspirational content/brand”.
+2. Ladda ner, fyll i och importera template som heter Inspirational Relations.
+3. Granska plattformen för att verifiera att allt ser korrekt och bra ut.
+
+
+## Q&A
+
+<details>
+<summary>Hur väljer jag vilka inspirationsentiter som ska skapas?</summary>
+
+svar 
+
+</details>
+
+<details>
+<summary>Går det att automatisera skapandet av inspirationsentiteter?</summary>
+
+svar 
+
+</details>
+
+<details>
+<summary>Kan en produkt ha hur många inspirationsentiteter som?</summary>
+
+svar 
+
+</details>
+
+<details>
+<summary>Hur ska jag avgöra vilken information som ska ligga på produkter och vilken information som ska ligga på inspirationsentiterna?</summary>
+
+svar 
+
+</details>

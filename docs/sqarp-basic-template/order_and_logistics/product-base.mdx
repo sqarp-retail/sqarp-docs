@@ -1,0 +1,20 @@
+---
+sidebar_position: 2
+---
+
+# Product Base
+
+In this module, products are created in **SQARP** and enriched with basic information.
+
+---
+
+## Data & Definitions
+
+| **Data**                  | **Definition**                                                   | **Rules & Validation** |
+|---------------------------|-------------------------------------------------------------------|-------------------------|
+| **my_article_number**     | The unique identifying article number on the product you use.     | Can only contain alphanumerical characters and `-`, `_`, `/`, `.`, `:`. Each article number must be unique within the organisation. |
+| **manufacturer_article_number** | The manufacturer’s unique identifier for a product. Can be the same as `my_article_number`. | Can only contain alphanumerical characters and `-`, `_`, `/`, `.`, `:`. Each article number must be unique within the organisation. |
+| **country_of_origin**     | The country of origin for the product.                            | Must be **2 uppercased alphabetical characters**. Validated towards **ISO 3166-1 alpha-2** standard. |
+| **taric_code**            | The EU tariff code for the product.                               | Must be **10 numerical characters**. Validated towards EU database. [See TARIC](https://taxation-customs.ec.europa.eu/customs-4/calculation-customs-duties/customs-tariff/eu-customs-tariff-taric_en) |
+| **identifier_ean**        | The identifier value for EAN/GTIN13 codes.                        | Must be **13 digits** and unique for all articles. |
+

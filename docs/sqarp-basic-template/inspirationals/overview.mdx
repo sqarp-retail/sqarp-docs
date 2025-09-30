@@ -1,0 +1,172 @@
+---
+sidebar_position: 1
+---
+
+# Overview
+
+In this module, inspirational entities and their relations to products are managed.  
+**Inspirational entities** is the collective term for **Brands**, **Series**, and **USPs** in SQARP.  
+This module is **language-dependent**.
+
+Each product **must** be connected to a **Brand** and can optionally carry one or more **Series** and/or **USP entities**.
+
+You can create and enrich your inspirationals in the **SQARP Basic Template**:  
+- See sheets `basic_brands_xx` for Brands  
+- See sheets `basic_inspirationals_xx` for Series and USPs
+
+---
+
+## Context in the Entire Process
+
+This section manages information not tied to specific products but still highly relevant for consumers to understand a product range. Inspirational entities allow information to be stored at the **correct level of abstraction** with a **single source of truth**.
+
+If data for inspirationals were stored on each product, any change would require updating hundreds of products. By storing data on entities and linking them to products, you avoid duplication and simplify management.
+
+Examples of inspirational entities:
+- Brand
+- Series / Collection
+- USP / Technology / Material
+- Category (broad product groups)
+
+**Goal:** Consolidate all marketing information relevant to a customer’s buying journey and/or navigation of a product range.  
+All data should be standardized and include explicit relationships between inspirational entities and products.
+
+> **SEO note:** Inspirational content can help drive organic traffic to landing pages. Perform keyword analysis to ensure chosen entities reflect actual customer search demand.
+
+---
+
+## What Data Is Included in This Module?
+
+Three groups of inspirational entities exist in the Basic Template. You can create any number of entities within each group:
+
+### Brand
+- Highest-level inspirational entity in SQARP’s hierarchy.
+- Encapsulates the entire brand without focusing on specific products.
+- Used to create brand pages on e-commerce sites.
+- Critical for attracting organic traffic from brand-related search queries.
+
+### Series
+- Sub-collections of a brand’s assortment.
+- Defined by the manufacturer (functional, design, or price categories).
+- Products can belong to multiple series, and a series can include multiple categories.
+
+### USP (Unique Selling Points)
+- Sub-collections defined by technology, function, design, material, etc.
+- Each USP is linked to a brand.
+- Products can have multiple USPs.
+- Broadest definition; any inspirational content not tied to a brand or series can be a USP.
+
+---
+
+**Entity structure:**
+- Name
+- Brand link
+- Images
+- Documents
+- Videos
+- Descriptions
+
+**Rules:**
+- Products are linked to entities via relationships.
+- Each entity is linked to a brand.
+
+---
+
+## Why Is This Module Important?
+
+### Help Customers Navigate
+- Presenting relevant inspirational content at the right abstraction level helps customers quickly find what they need.
+
+### Convey the Full Story of the Assortment
+- Customers often only see item-level information (especially on third-party channels).
+- Inspirational content provides a complete picture, adding marketing context and differentiation.
+
+### Drive Organic Traffic
+- Well-crafted inspirational content improves SEO and increases landing page relevance.
+
+### Improve Customer Experience
+- Builds a narrative from brand level to product level.
+- Helps customers understand context and make informed decisions.
+
+### Streamline Product Information Management
+- Avoids duplication by storing shared data on entities.
+- Enables efficient updates and consistent information across products.
+
+---
+
+## Tips & Tricks / Best Practices
+
+:::caution SQARP GOLD STANDARD — Inspirational Entities & Slugs
+- Assign **slugs** that are self-explanatory.
+- Store all **static marketing content for e-commerce** on **inspirational entities**.
+- Every inspirational entity should have:
+
+  - At least one image
+  - At least one description block
+  - Associated products (never create standalone entities without links)
+
+- Descriptions should make sense on associated product pages.
+:::
+
+**Avoid creating:**
+- Inspirational entities with no associated content.
+
+---
+
+## How to Complete This Module
+
+**For Brands:**  
+- In `basic_brands_xx` sheet, fill in data for brands linked to your products.
+- Include brand logo and content (each row = one brand).
+
+**For Series & USPs:**  
+- In `basic_inspirationals_xx` sheet, fill in data and content (each row = one Series or USP).
+
+**Linking:**  
+- Connect Brand, USP, and Series **slugs** to articles in the main sheet.
+
+---
+
+## Q&A
+
+<details>
+  <summary><strong>Q1: How do I choose which inspirational entities to create?</strong></summary>
+  <div>
+    <p>Choose entities with meaningful, non-product-specific marketing content that aids customer navigation and understanding.</p>
+    <p>Run keyword analysis to reflect real customer demand.</p>
+    <p>Avoid empty entities — each should have an image, a description, and product links.</p>
+  </div>
+</details>
+
+<details>
+  <summary><strong>Q2: Can creation of inspirational entities be automated?</strong></summary>
+  <div>
+    <p>Not fully — entities require manual creation and enrichment in the Basic Template. Streamline by:</p>
+    <ul>
+      <li>Preparing external system data for bulk import</li>
+      <li>Using consistent slugs/names for easier linking</li>
+      <li>Leveraging pre-existing data from internal databases</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary><strong>Q3: Can a product be linked to any number of inspirational entities?</strong></summary>
+  <div>
+    <p>Yes, with type-specific rules:</p>
+    <ul>
+      <li><strong>Brand:</strong> exactly one per product</li>
+      <li><strong>Series:</strong> multiple allowed</li>
+      <li><strong>USP:</strong> multiple allowed</li>
+    </ul>
+  </div>
+</details>
+
+<details>
+  <summary><strong>Q4: How do I decide what goes on products vs. inspirational entities?</strong></summary>
+  <div>
+    <p>Put <strong>shared, overarching marketing info</strong> (brand story, collection concept, technology details) on inspirational entities.</p>
+    <p>Put <strong>product-specific info</strong> (specs, SKU-level images, price, stock) on the product itself.</p>
+    <p><strong>Rule:</strong> If content would need to be duplicated across products, it belongs to an inspirational entity.</p>
+  </div>
+</details>

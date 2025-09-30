@@ -1,0 +1,93 @@
+# Produktrelationer
+## Kontext i hela processen
+
+* Modulen där kompabilitetsrelationer skapas mellan olika produkter. Med kompabilitetsrelationer menas tillval, tillbehör, reservdelar, komponenter och andra relationer där den relaterade produkten köps tillsammans med en annan produkt. Modulen hanterar inte förslag på relaterade produkter eller alternativ som kunden också kan vara intresserad av såsom *”Du kanske också också är intresserad av denna”* eller *”Se även den här produkten”.* 
+* Målet med modulen är att alla skapa alla relevanta relationer och importera dessa till SQARP plattformen, så att relaterade artiklar kan visas tillsammans med andra artiklar. Detta hjälper kunden att förstå hur sortimentet hänger ihop, ger tips och vägledning för att säkerställa en bra köpupplevelse och garanterar att inga relevanta relationer missas.
+* Målet är även att säkra att den grundläggande informationen som krävs för att stödja flöden för order och logistik fungerar.
+
+## Vad är det för data som ingår i denna modul?
+
+* Modulen behandlar endast relationer mellan produkter och metadata kopplad till dessa relationer. 
+* En relation mellan en produkt är en koppling mellan en ”huvudprodukt” och en ”relaterad produkt”. Således behöver båda produkterna vara skapade i SQARP i tidigare moduler för att kunna kopplas till varandra.
+* Alla relationer klassificeras i en av fem olika grupper: Tillval, Tillbehör, Reservdelar, Komponenter och Passar-till. 
+
+***Tillval ”Addon”:*** Produkter som helst bör köpas tillsammans med ”huvudprodukten”. I vissa fall är detta till och med obligatoriskt, eftersom tillvalet inte kan köpas separat eller så kan man inte köpa huvudprodukten utan tillvalet. Tillval köps alltid i definierade kvantiteter och inom ramen för tillvalskategorier. 
+Med definierade kvantiteter menas att för varje tillval specificerar vi antalet enheter av det tillvalet som måste köpas om tillvalet väljs. Det innebär att kunden inte kan ge antalet enheter fritt. 
+
+För **Tillval** ska man berika relationerna med meta-data genom att dela in relationerna i olika tillvalskategorier. Meta-data kan vara namn, beskrivning, bild, video och dokument. 
+
+***Tillbehör:*** Produkter som rekommenderas tillsammans med huvudprodukten, men där tillbehöret är en separat produkt som kan köpas för sig. 
+
+***Reservdelar:*** Produkter som klassas som komponenter till huvudprodukter. Reservdelar är aldrig relevanta att köpa i samma beställning som huvudprodukten. Istället använder kunder denna relation för att hitta delar till en produkt de redan äger – och reservdelen är endast relevant att köpa om kunden redan äger huvudprodukten. Reservdelar är alltid separata produkter som kan köpas för sig.
+*Exempel: Cykelkedja. Om din cykelkedja går sönder kan du vilja köpa en ny kedja.*  
+
+***Komponenter:*** Produkter som ingår i ett paket – där paketet är huvudprodukten. Komponenter kan vara relevanta att köpa utan att äga huvudprodukten. Komponenter kan också vara relevanta att köpa i samma beställning som huvudprodukten. I teorin består ett paket alltid av flera komponenter. 
+*Exempel: Ett bord med stolar som ett paket med eget artikelnummer, men bordet och stolarna själva har egna artikelnummer och kan köpas separat.*
+
+***Passar-till:*** 
+
+
+
+## Varför är denna modul viktig?
+
+**Hjälpa kunden förstå hur sortimentet hänger ihop**
+
+o Om du har ett komplext eller tekniskt sortiment där en kund behöver köpa flera artikelnummer för att få en komplett produkt, är relationer avgörande för att vägleda kunden genom köpprocessen. 
+
+**Öka sannolikheten att du får en nöjd kund**
+
+o Det är viktigt att produkten kunden får motsvarar de förväntningar som ställts i den digitala kanalen vi köpet. Om relevanta relationer presenteras tillsammans med huvudprodukten minskar risken att kunden missar viktiga tillval eller tillbehör som skulle kunna förbättra köpet och upplevelsen ytterligare.
+
+o Om relationer kan inspirera kunden till att göra ett ännu mer komplett köp, ökar också sannolikheten att kunden blir nöjd.
+
+o Relationer ger dig möjligheten att guida kunden genom sortimentet och säkra att de får den kompletta upplevelsen av produkten som de köper.
+
+**Få upp dina genomsnittliga ordervärden**
+
+o Relevanta tillval, tillbehör och andra kompabilitetsrelationer kan konvertera så mycket som 50% på köp av huvudprodukten. Detta ger högre genomsnittliga ordervärden och bättre ekonomi i hela e-handelsaffären då fraktkostnaden kan spridas ut över flera artiklar. 
+
+o I fysiska butiker är det vanligt att visa relaterade produkter tillsammans. Detta är den digitala versionen av en ”butiksdisplay”. Exempelvis rekommenderas rostad lök tillsammans med korvbröd, eller fästanordning tillsammans med TV-apparater.
+
+
+**Minimera antalet klick som kunden behöver göra för att få ihop en hel varukorg**
+
+o Om relaterade produkter inte finns definierade i datan kommer de inte kunna visas tillsammans med huvudprodukten. Detta innebär att kunden måste navigera genom kategoriträdet, använda sökfunktionen eller på annat sätt leta efter tillbehöret. Detta är som regel mellan 8 och 12 klick för att hitta rätt produkt vilket dramatiskt minskar sannolikheten för ett köp. Dessutom ökar det kundens osäkerhet kring kompabilitet, vilket ytterligare sänker konverteringsgrad.
+
+## Tips & trix / Best-practice
+
+
+:::caution SQARP GOLD STANDARD
+
+- Bygg relationer i en riktning, från huvudprodukten till den relaterade produkten. Det är generellt sett inte en bra idé att bygga relationen även åt andra hållet.
+- Inkludera en lämplig beskrivning av tillvalen för att vägleda kunden genom urvalet av tillval.
+- Det är bra att lägga till några generiska tillbehör som är lämpliga att rekommendera tillsammans med huvudprodukten. Inkludera dock inte för många; fem är en bra riktlinje för den här typen av generiska tillbehör.
+:::
+
+
+## Hur går jag praktiskt tillväga för att färdigställa modulen?
+
+1. Ladda ner, fyll i och importera template som heter ”relations”. Om du ska skapa tillval som relationstyp behöver du först ladda ned, fylla i och importera template som heter ”addon categories”. För denna template behöver du även definiera vilka språk det ska göras på. 
+2. Granska plattformen för att verifiera att allt ser korrekt och bra ut. Säkerställ så du inte missat några implicita relationer.
+
+## Q&A
+
+<details>
+<summary>Jag har inga relationer i mitt sortiment idag, vad kan jag göra?</summary>
+
+Det finns flera steg du kan ta för att implementera detta. Till att börja med kan du identifiera vilka produkter som är kompatibla eller relaterade till varandra baserat på deras användningsområden eller kundbehov. Sedan kan du enkelt lägga till dessa relationer i SQARP plattformen. 
+
+</details>
+
+<details>
+<summary>Jag har kompletterande produkter som passar bra, men som inte"behövs". Vilken relationstyp ska jag använda för dessa?</summary>
+
+Här kan du använda relationstypen Tillbehör. Dessa relationer kan hjälpa kunder att upptäcka och överväga ytterligare produkter som förbättrar eller kompletterar huvudprodukten. 
+
+</details>
+
+<details>
+<summary>Hur många relationer ska jag ha på en huvudprodukt?</summary>
+
+Det beror dels på produkttypen men generellt sett kan ett för stort antal tillbehörsalternativ göra det rörigt för kunden och således att fatta ett köpbeslut. Därför är det fördelaktigt att begränsa antalet till ett fåtal, kanske som mest 5 alternativ, som är mest relevanta och passnde för huvudprodukten. Detta kommer underlätta för kunden att navigera och fatta ett köpbeslut. Det är viktigt att prioritera de tillbehör som bäst kompletterar huvudprodukten eller som ni önskar att kunden ska köpa, med tanke på marginaler och kundens behov. Med detta menar vi att ni bör begränsa er till kanske högst fyra alternativ inom en specifik relationstyp. Ni behöver inte begränsa er till att ha endast fyra av alla relationstyper totalt sett, utan fyra inom varje relationstyp. 
+
+</details>

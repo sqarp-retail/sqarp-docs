@@ -1,0 +1,98 @@
+# Order- och logistikinformation
+## Kontext i hela processen
+
+
+
+* Första modulen där produkter skapas och grundläggande information läggs på produkterna.
+* Målet för modulen är att skapa alla artikelnummer i SQARP för att sedan kunna berika dessa med mer information och mer kontext i famtida moduler.
+* Målet är även att säkra att den grundläggande informationen som krävs för att stödja flöden för order och logistik ska fungera.
+
+## Vad är det för data som ingår i denna modul?
+
+* Artikelnummer och identifikatorer
+* Produktbenämningar
+* Tullstatsnummer
+* Ursprungsland
+* Förpackningsdata
+* Försäljningsenheter & omvandlingsfaktorer
+* Pris och leveranstid per försäljningsmarknad
+
+## Varför är denna modul viktig?
+
+Order och logistikinformation är nödvändig för att den digitala affären ska fungera överhuvudtaget. 
+
+* **Artikelnummer** används för att identifiera en unik köpbar produkt och kan användas för att matcha mellan olika system. Det är särskilt viktigt i orderflödet för att tydligt ange vilken produkt som avses.
+* **Produktbenämning** används ofta på både order och fraktsedel för att förstå vilken produkt man pratar om. 
+* **Tullstatsnummer** används vid import och export för att deklarera vilka typer av varor man handlar med. Tullkoder är tvingande i de flesta affärssystem med artikelinformation. 
+* **Ursprungsländer** är enligt lag tvingande i de flesta affärssystem.
+* **Förpackningsdata** används för att estimera fraktkostnader och kunna optimera logistikflöden. 
+* **Enheter** - **priser** - **leveranstider** krävs för fungerande order och logistikflöden.
+
+## Vad är tvingande / vad är valbart?
+
+
+| Data | Obligatoriskt / Valbart| Namn i template |
+| --- | --- | --- |
+| Artikelnummer | Obligatoriskt fält | manufacturer_article_number
+| Varumärke | Obligatoriskt fält | brand_name_slug
+| Tullstatsnummer | Obligatoriskt fält | taric_code
+| Ursprungsland | Obligatoriskt fält | country_of_origin
+| Produktlänk | Valbart fält | manufacturer_product_url
+| Produktidentifikatorer | Valbart fält | identifier_typ
+| Förpackningsdata | Obligatoriskt fält | package_typ_fördefinierad-enhet
+| Organisation | Obligatoriskt fält | organisation_slug
+| Försäljningsmarknad | Obligatoriskt fält | market_slug
+| Leverantörsproduktnamn | Valbart fält | supplier_product_title
+| Försäljningsenheter | Obligatoriskt fält |
+| Minsta orderantal | Valbart fält | supplier_minimum_order_quantity
+| Ledtid | Obligatoriskt fält |supplier_max_delivery_time
+| Produktstatus | Obligatoriskt fält | status
+| Lanseringsdatum | Obligatoriskt om produktstatus är unreleased | release_date
+| End of Life | Valbart fält| discontinued_date
+
+
+## Tips & trix / Best-practice
+
+
+:::info SQARP GOLD STANDARD
+
+
+**Gold standard rule**: Artikelnummer bör endast innehålla alfanumeriska tecken samt ”-” och ”_”. Minst ett tecken bör vara icke-numeriskt. Artikelnummer bör vara högst 20 tecken långa.
+
+**Gold standard reasoning**: När du flyttar data mellan system är det viktigt att undvika att artikelnummer förvrängs. Om du enbart använder numeriska tecken finns det en risk att koder tolkas som numeriska värden. Detta kan leda till att de faktiska numren förvrängs, särskilt om det finns inledande nollor. Det kan också göra det svårt att matcha koder mellan databaser, eftersom de riskerar att läsas som olika datatyper i olika system. Dessutom bör du undvika för långa artikelnummer och specialtecken för att säkerställa att de är kompatibla med de flesta ERP-system.
+:::
+
+
+## Hur går jag praktiskt tillväga för att färdigställa modulen?
+
+1. Bestäm omfattningen av produkter och språk.
+2. Ladda ner, fyll i och importera template som heter "product base"
+3. Ladda ner, fyll i och importera template som heter "supplier"
+4. Åtgärda eventulla fel som uppstår vid validering. Vanliga fel kan vara:
+
+- *Tullstatsnummer inte uppfyller Tullverkets krav*
+- *Ursprungsländer inte följer ISO-standard*
+- *Ogiltiga fältvärden*
+
+## Q&A
+
+<details>
+<summary>Jag saknar tullkoder på mina produkter, hur sätter jag dem?</summary>
+
+Genom att gå in på tulltaxan: https://tulltaxan.tullverket.se/arctictariff-public-web/#!/taric/nomenclature/sbn?sd=2024-07-09&d=I&cc=&l=sv&ql=sv&ea=false
+
+Ta hjälp av texten i rubriken till HS-numret. Det är viktigt att du läser anmärkningarna till avdelningarna och kapitlen för att du ska kunna hitta rätt varukod. Välj rätt 6-siffrig kod. Markera export och sök på den 6-siffriga koden och beroende på vad det är för vara - välj korrekt slutsiffror.
+
+**För norska tullkoder, gäller följande:** 
+
+1. En artikel som klassificerats och fått EU-tullkod ska ha motsvarande tullkod i Norge. 
+2. De 4 första siffrorna i tullkoderna är identiska i hela världen. Tex en gasolgriill av järn/stål har alltså tullkod som börjar på 7321 i alla länder.
+3.  För att hitta korrekt sista siffror i den norska koden knappar man  in de 4 första siffrorna av EU-tullkoden i sökfältet här: https://tolltariffen.toll.no/tolltariff 
+4. Öppna upp undernivåer, ett i taget, stanna där varan passar.
+Norska koder är 8 siffror och de är lite enklare (inte lika många varianter som i EU).
+
+För ytterligare hjälp eller rådgivning, kontakta Tullverket direkt för personlig konsultation. 
+
+</details>
+
+
