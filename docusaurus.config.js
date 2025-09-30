@@ -88,10 +88,10 @@ const config = {
           {
             title: 'Docs',
             items: [
-              {
-                label: 'Data Editing',
-                to: '/category/data-editing',
-              },
+              // {
+              //   label: 'Data Editing',
+              //   to: '/category/data-editing',
+              // },
             ],
           }
         ],
