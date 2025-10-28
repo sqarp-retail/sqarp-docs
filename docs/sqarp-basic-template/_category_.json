@@ -1,8 +1,8 @@
 {
-  "label": "SQARP Basic Template",
+  "label": "SQARP Basic Bulk Editing",
   "position": 1,
   "link": {
     "type": "generated-index",
-    "description": "Learn how to create products in SQARP with the Basic Template!"
+    "description": "Learn how to create products in SQARP with the Basic Bulk Editing template!"
   }
 }
